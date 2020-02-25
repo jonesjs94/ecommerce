@@ -1,0 +1,289 @@
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;	
+	box-shadow: 0px 1px 7px #3a3a3a;
+	background: #fff;
+	user-select: none;
+}
+
+#navegador {
+	display: flex;
+	padding: 0 1rem;
+	background: #fff;
+}
+
+#navegador-celular { 
+	display: none; 
+	background: #f8f9fa;	
+}
+
+#contenedor-categorias-cel {	
+	position: absolute;
+  width: 40%;
+  height: 100vh;
+  background: white;
+}
+
+.logo img {
+	width: 9rem;
+	height: auto;
+}
+
+.btn-celular {
+	display: none;
+	font-size: 120%;
+	color: #292929;
+	padding: 0 1rem;
+  align-items: center;
+}
+
+/*---------- Categorías ----------*/
+
+#categorias {
+	position: relative;
+	z-index: 20;
+}
+
+#categorias:hover {
+	cursor: pointer;
+}
+
+#categorias span {
+	padding-left: 5px;
+}
+
+#icono-categorias {
+	position: relative;
+	padding: 1.5rem;
+  margin: 0 1rem 0 .5rem;
+}
+
+#icono-categorias:hover {
+	cursor: pointer;
+}
+
+#categorias:hover > #contenedor-categorias {
+	display: block;
+}
+
+#contenedor-categorias {
+	display: none;
+	position: absolute;
+	top: 72px;
+	font-size: 80%;
+}
+
+#contenedor-categorias > ul { /* Primer ul tiene otros parámetros */
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#contenedor-categorias i {
+	  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 15rem;
+	height: 22rem;
+	background: #fff;
+	border-left: 1px solid rgba(0,0,0,.125);
+	box-shadow: 2px 4px 4px #3a3a3a;
+}
+	
+li:hover > ul {
+	display: block;
+}
+
+.menu .item-lista {
+  display: flex;
+  justify-content: space-between;	
+	padding: .5rem 1.5rem; 
+}
+
+.menu .item-lista a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu .item-lista:hover {
+	background: #9C141C; 
+}
+
+.menu .item-lista:hover > a {
+	color: white;
+}
+
+.menu .item-lista:hover > i{
+	color: white;
+}
+
+/*---------- Categorias en celular -----------*/
+#contenedor-cat-cel {
+	position: fixed;
+	width: 60%;
+	height: 100vh;
+	overflow-y: scroll;
+	background: #fff;
+	z-index: 20;
+}
+
+#contenedor-cat-cel a {
+	font-size: 80%;
+	padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
+#contenedor-cat-cel a:hover {
+	border-left: 3px solid #a31d27;
+}
+
+.nivel-1 {
+	background: #fff;
+}
+.nivel-2 {
+	background: #E3E3E3;
+}
+.nivel-3 {
+	background: #D2D2D2;
+}
+.nivel-4 {
+	background: #C1C1C1;
+}
+/*---------- Formulario de búsqueda ----------*/
+
+#form-busqueda-navegador {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 35vw;
+}
+
+#form-busqueda-navegador input {
+	width: 80%;
+}
+
+#form-busqueda-navegador button {
+	margin-left: 10px;
+}
+
+/*---------- Menú secundario ----------*/
+nav ul {
+	margin-left: auto;
+}
+
+ul.navbar {
+	flex-wrap: nowrap;
+}
+
+nav ul .nav-link {
+	color: #797979 !important;
+}
+
+nav ul .nav-link:hover {
+	color: #000 !important;
+}
+
+ul .dropdown-menu {
+  top: 53px;
+  right: 0px;
+  left: initial;
+  border-radius: 0;
+  border: 0;	
+	box-shadow: 0px 4px 4px #3a3a3a;
+}
+
+ul .dropdown-item {
+	padding: .5rem 1.5rem;
+}
+
+ul .dropdown-item:hover {
+	color: #fff;
+	background: #9C141C;
+	cursor: pointer;
+}
+
+
+/*------- Formulario de inicio de sesión -------*/
+
+
+#iniciar-sesion {
+	position: relative;
+	z-index: 10;
+}
+
+#iniciar-sesion form {
+	position: fixed;
+	height: 100vh;
+	background: #fff;
+	right: 0;
+	padding: 1rem;
+	z-index: 2;
+}
+
+#iniciar-sesion a {
+	color: #9C141C;
+}
+
+.fa-arrow-right {
+	display: none;
+}
+
+
+/* --------------------------------------------------- Media Querys --------------------------------------------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+		#icono-categorias { 
+		padding: 1.5rem .5rem; 
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	#navegador { 
+		display: none !important; 
+	}
+
+	#navegador-celular { 
+		display: flex !important; 
+		justify-content: space-between;
+	}
+
+	#contenedor-categorias-cel > ul {
+		display: block;
+	} 
+
+	.btn-celular { 
+		display: flex; 
+	}	
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	#navegador-celular i {
+		font-size: 1rem;
+	}
+
+	.logo img {
+		width: 8rem;
+		margin-right: 0;
+	}
+}

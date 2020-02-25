@@ -1,0 +1,125 @@
+/* ---------- Categoría desplegada ---------- */
+#categoria-desplegada .activo {
+	font-weight: 500;
+	color: #9f131d;
+	cursor: initial;
+	text-decoration: none;
+}
+
+#categoria-desplegada a:not(.activo) {
+	color: #737373;
+	font-weight: 500;
+}
+#categoria-desplegada a:not(.activo):hover {
+	color: #9f131d;
+	text-decoration: underline;
+}
+
+
+/* ---------- Menu lateral de categorías ---------- */
+.menu-lateral {
+	color: #a11721;
+}
+
+.menu-lateral ul li {
+	padding: .3rem;
+}
+
+.menu-lateral ul li a {
+	color: #a11721;
+}
+.menu-lateral .categorias:hover {
+	text-decoration: underline;
+}
+
+.menu-lateral .categoria-activa {
+	text-decoration: none;
+	cursor: initial;
+	color: initial;
+	font-size: 105%;
+}
+
+.raya {
+	display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.indicador-menu-lateral .activo {
+	color: red;
+}
+
+#div-ordenador-productos {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#div-ordenador-productos div,
+#div-ordenador-productos form {
+	width: 25%;
+	margin-left: 25px;
+}
+
+#ordenador-productos, #busqueda-productos {
+	width: 100%;
+}
+
+label[for="ordenador-productos"] {
+	white-space: nowrap;
+	padding: .3rem .5rem;
+	margin: 0;
+	font-size: 80%;
+}
+
+
+/* --------------------------------------------------- Media Querys --------------------------------------------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	#categoria-desplegada {
+    font-size: 80%;
+    justify-content: center;
+	}
+
+	#categoria-desplegada-producto {
+		display: none;
+	}
+
+	h1 {
+    font-size: 1.7rem;
+    text-align: center;
+	}
+
+	#div-ordenador-productos div {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#div-ordenador-productos form {
+		display: none;
+	}	
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	#div-ordenador-productos {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#div-ordenador-productos div:nth-child(2) { /* Buscador secundario */
+		margin-top: .5rem;
+	}	
+}
+
+
+
+
+

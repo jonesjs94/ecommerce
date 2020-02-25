@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tienda elDial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<!-- BOOTSTRAP.CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/52fc4e6af1.js" crossorigin="anonymous"></script>
+  <!-- CSS solo para esta plantilla -->
+  <link rel="stylesheet" type="text/css" href="css/producto.css">
+  <!-- LOCAL CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/clases.css">
+
+</head>
+<body>
+
+	<div id="contenedor-vacio"></div>
+
+	<header>
+		<!-- Navegador -->
+		<nav id="navegador">
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<!-- Categorías del Menú -->
+			<div id="categorias">
+				<div role="button" id="icono-categorias">
+					<i class="fas fa-align-left mr-1"></i> Categorias
+				</div>
+				<div id="contenedor-categorias">
+				</div>
+			</div>
+			<!-- Formulario de búsqueda -->
+			<form id="form-busqueda-navegador" method="GET" action="">
+					<input class="form-control" type="text" name="busqueda" placeholder="Libros, ebooks, cursos ...">
+					<button class="btn btn-rojo" type="submit"><i class="fas fa-search"></i></button>
+			</form>
+			<!-- Menú secundario -->
+			<ul class="nav navbar">
+				<li class="nav-item btn-group">
+					<a class="nav-link  dropdown-toggle" href="#" id="ayuda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+					<div class="dropdown-menu" aria-labelledby="ayuda">
+						<a class="dropdown-item" href="#">Como comprar</a>
+						<a class="dropdown-item" href="#">Preguntas frecuentes</a>
+						<a class="dropdown-item" href="#">Contáctenos</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="micuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+					<div class="dropdown-menu" aria-labelledby="micuenta">
+						<span id="btn-iniciar-sesion" class="dropdown-item" onclick="desplegarInicioSesion()">Iniciar Sesión</span>
+						<span class="dropdown-item" href="#">Crear Cuenta</span>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Navegador celular -->
+		<nav id="navegador-celular">
+			<div class="d-flex">
+				<span id="btn-categorias-cel" class="btn btn-light btn-celular" role="button"><i class="fas fa-bars"></i></span>
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-search"></i></span>				
+			</div>
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<div class="d-flex">
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-shopping-cart"></i></span>			
+				<span class="btn btn-light btn-celular" role="button" onclick="desplegarInicioSesion()">
+					<i class="fas fa-user-tie"></i>
+					<i class="fas fa-arrow-right"></i>
+				</span>
+			</div>
+		</nav>
+		<!-- Contenedor categorías de celular -->
+		<nav id="contenedor-cat-cel" style="transform: translateX(-100%);"></nav>
+
+		<!-- Iniciar sesión -->
+		<div id="iniciar-sesion" class="d-none">
+			<form style="transform: translateX(100%);">
+	      <h1 class="h3 pb-4 text-center">Iniciar sesión</h1>
+	      <div class="form-group row">
+	        <label class="col-12" for="correo">Correo Electrónico:</label>
+	        <div class="col-12">
+	          <input id="correo" class="form-control form-control-sm" type="email" name="correo" required>
+	        </div>
+	      </div>
+	      <div class="form-group row">
+	        <label class="col-12" for="tel">Contraseña:</label>
+	        <div class="col-12">
+	          <input id="pass" class="form-control form-control-sm" type="password" name="pass" required>
+	        </div>
+	      </div>
+	      <div class="form-group row d-flex justify-content-center">
+	        <a class="small texto-eldial" href="#">¿Olvidaste la contraseña?</a>
+	      </div>
+	      <button type="submit" class="btn btn-rojo btn-block btn-sm">Entrar</button>
+	      <div class="form-group row d-flex justify-content-center mt-2">
+	        <span class="small mr-1">¿No tenés cuenta? </span><a class="small texto-eldial" href="#"> Registrate</a>
+	      </div>	      
+    	</form>
+		</div>
+
+	</header>
+
+	<main>
+
+	<div class="container py-3">
+		
+
+		<!-- Producto -->
+		<div class="card my-md-4">
+		<div class="row">
+			<div class="col-lg-4 col-md-5">
+			<img class="img-fluid" src="img/ejemplo-libro.jpg">
+			</div>
+			<div class="col-lg-8 col-md-7">
+				<div class="card-body h-100">
+					<div class="">
+						<!-- Ubicación producto -->
+						<ul id="categoria-desplegada-producto" class="nav">
+							<li class="nav-item"><a class="text-muted" href="#">Libros</a></li>
+							<li class="nav-item separador">/</li>
+							<li class="nav-item"><a class="text-muted" href="#">Papel</a></li>
+							<li class="nav-item separador">/</li>				
+							<li class="nav-item"><a class="text-muted" href="#">Civil y Comercial</a></li>
+						</ul>
+						<h1 id="titulo-producto">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</h2>
+					</div>
+						<div class="my-3 my-md-0">
+							<p id="precio-producto" class="texto-eldial">$1700,00</p>
+							<p class="small texto-eldial mb-0">Hasta 12 cuotas</p>
+							<p class="small"><a href="">Ver medios de pago</a></p>
+						</div>
+						<button class="btn btn-rojo">Agregar al carrito</button>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<!-- Descripción del producto -->
+		<div id="descripcion" class="py-4">
+			<h2>Descripción del producto</h2>
+
+			<div class="row no-gutters">
+				<div class="col-sm-2">AUTOR</div>
+				<div class="col-sm-10">PIROLO, MIGUEL Á., MURRAY, CECILIA M., OTERO, ANA M., PINOTTI, MÓNICA</div>
+				<div class="col-sm-2">EDITORIAL</div>
+				<div class="col-sm-10">	Editorial Astrea</div>
+				<div class="col-sm-2">AÑO</div>
+				<div class="col-sm-10">2017</div>
+				<div class="col-sm-2">CATEGORÍA</div>
+				<div class="col-sm-10">Derecho Laboral</div>
+				<div class="col-sm-2">FORMATO</div>
+				<div class="col-sm-10">Papel</div>
+				<div class="col-sm-2">PÁGINAS</div>
+				<div class="col-sm-10">656</div>
+			</div>
+
+			<div id="sinopsis">
+				<h2>Sinopsis</h2>
+				<p>SECLO. Nuevo Sistema de Gestión Judicial (Lex 100). Medios electrónicos de utilización obligatoria. Juicio ordinario. Incidentes. Medidas cautelares y anticipatorias. Recursos. Ejecución. Juicios de amparo, sumarísimos y ejecutivos. Demandas contra el Estado. Procedimiento en las provincias.Esta obra tiene por finalidad cubrir los requerimientos esenciales de los programas de las materias que abordan el análisis del procedimiento laboral, a la vez que es útil para quienes comienzan a ejercer en conflictos laborales.Por ello, se describen los lineamientos básicos de la instancia previa y obligatoria de conciliación, y la información necesaria para llevar adelante un juicio en la materia.Los autores informan acerca del funcionamiento del nuevo Sistema de Gestión Judicial (Lex 100) y lo relativo a la obligatoriedad de utilizar medios electrónicos, orientada a la digitalización progresiva de los procesos judiciales.Se incluye un informe sucinto de los distintos ordenamientos provinciales, lo que permite tener un panorama completo de la materia, sin necesidad de recurrir a fuentes adicionales.</p>
+			</div>
+		</div>
+
+		<!-- Productos relacionados -->
+		<div id="productos-relacionados">
+		<h2 class="texto-eldial my-3">Productos relacionados</h2>
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-6">
+				<a class="link-producto" href="#">
+					<div class="card producto">
+						<img class="card-img-top" src="img/ejemplo-libro.jpg">
+						<div class="card-body">
+							<p class="card-title bold small">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+							<p class="card-text texto-producto font-weight-bold">$1.400,00</p>
+							<p class="card-text texto-producto">Hasta 12 cuotas</p>
+						</div>
+					</div>
+				</a>				
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<a class="link-producto" href="#">
+					<div class="card producto">
+						<img class="card-img-top" src="img/ejemplo-libro.jpg">
+						<div class="card-body">
+							<p class="card-title bold small">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+							<p class="card-text texto-producto font-weight-bold">$1.400,00</p>
+							<p class="card-text texto-producto">Hasta 12 cuotas</p>
+						</div>
+					</div>
+				</a>				
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<a class="link-producto" href="#">
+					<div class="card producto">
+						<img class="card-img-top" src="img/ejemplo-libro.jpg">
+						<div class="card-body">
+							<p class="card-title bold small">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+							<p class="card-text texto-producto font-weight-bold">$1.400,00</p>
+							<p class="card-text texto-producto">Hasta 12 cuotas</p>
+						</div>
+					</div>
+				</a>				
+			</div>
+			<div class="col-lg-3 col-md-4 col-6">
+				<a class="link-producto" href="#">
+					<div class="card producto">
+						<img class="card-img-top" src="img/ejemplo-libro.jpg">
+						<div class="card-body">
+							<p class="card-title bold small">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+							<p class="card-text texto-producto font-weight-bold">$1.400,00</p>
+							<p class="card-text texto-producto">Hasta 12 cuotas</p>
+						</div>
+					</div>
+				</a>				
+			</div>									
+
+		</div>
+		</div>
+
+	</div>	
+	</div>
+
+
+	<!-- Newsletter + Redes -->
+	<div id="newsleter-redes" class="container mt-5">
+	<div class="row">
+			<!-- Redes -->
+			<div class="col-md-5">
+				<p class="small text-muted">FACEBOOK</p>
+				<h3 class="mb-5">Síguenos en Facebook</h3>
+			</div>
+			<!-- Newsletter -->
+			<div class="col-md-7">
+				<p class="small text-muted">NEWSLETTER</p>
+				<h3 class="mb-5">Recibí todas las ofertas</h3>
+				<p class="mb-2">¿Quieres recibir nuestras ofertas? ¡Regístrate ya mismo y comienza a disfrutarlas!</p>
+				<form class="w-75">
+					<input class="form-control form-control-sm mb-2" type="text" name="nombre" placeholder="Nombre">
+					<input class="form-control form-control-sm mb-2" type="text" name="email" placeholder="Email">
+					<button class="btn btn-danger rounded-0" type="submit">Suscribirse</button>
+				</form>
+			</div>
+	</div>	
+	</div>
+
+	</main>
+
+	<footer>
+		
+		<div class="container-fluid">
+			<!-- Pagos -->
+			<div id="tarjetas" class="row">
+				<img height="30px" src="img/visa.png">
+				<img height="30px" src="img/mastercard.png">
+				<img height="30px" src="img/amex.png">
+				<img height="30px" src="img/argencard.png">
+				<img height="30px" src="img/banelco.png">
+				<img height="30px" src="img/cabal.png">
+				<img height="30px" src="img/cencosud.png">
+				<img height="30px" src="img/diners.png">
+				<img height="30px" src="img/mercadopago.png">
+				<img height="30px" src="img/nativa.png">
+				<img height="30px" src="img/pagofacil.png">
+				<img height="30px" src="img/rapipago.png">
+				<img height="30px" src="img/tarjeta-naranja.png">
+				<img height="30px" src="img/tarjeta-shopping.png">
+				<img height="30px" src="img/todopago.png">
+			</div>
+			<!-- Info Legal -->
+			<div id="legales" class="bg-dark p-5">
+				<ul class="nav">
+					<li class="nav-item"><a class="text-light nav-link" href="#">Quienes Somos</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Cómo anunciar</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Preguntas Frecuentes (FAQ)</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Políticas de privacidad</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Defensa del Consumidor</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Términos y Condicioes</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Datos Personales</a></li>
+				</ul>
+				<p class="text-light pt-5">Copyright Tienda elDial.com - 2019. Todos los derechos reservados.</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- JQUERY.JS / POPPER.JS / BOOTSTRAP.JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Librerias JS -->
+  <script type="text/javascript" src="js/librerias/anime.min.js"></script>	
+	<!-- JS LOCAL -->
+	<script type="text/javascript" src="js/categorias.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+
+
+
+	#libros-destacados h2,
+	#cursos-destacados h2 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+
+	/*------------- Productos -------------*/
+
+	#categoria-desplegada {
+    font-size: 80%;
+    justify-content: center;
+	}
+
+	#categoria-desplegada-producto {
+		display: none;
+	}
+
+	h1 {
+    font-size: 1.7rem;
+    text-align: center;
+	}
+
+	#div-ordenador-productos div {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#div-ordenador-productos form {
+		display: none;
+	}
+
+	/*------------- Producto -------------*/
+
+	#titulo-producto {
+		font-size: 1.2rem;
+	}
+
+	#precio-producto {
+		font-size: 1.5rem;
+	}
+
+/*	#descripcion .row .col-sm-2 {
+		border-bottom: 0;
+	}*/
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+	main {
+		margin-top: 66px;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+
+
+	#slider {
+		display: none;
+	}
+
+	#contenedor-confianza {
+		font-size: 80%;
+	}
+
+	#contenedor-confianza h2 {
+		padding: 1rem 1.5rem 2rem 1.5rem; 
+		font-size: 1.3rem;
+	}
+
+	.card { margin-bottom: 1rem; }
+
+	/*--- Contenedor ordenador productos ---*/
+	#div-ordenador-productos {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#div-ordenador-productos div:nth-child(2) { /* Buscador secundario */
+		margin-top: .5rem;
+	}
+
+
+}

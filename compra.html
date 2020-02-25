@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tienda elDial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<!-- BOOTSTRAP.CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/52fc4e6af1.js" crossorigin="anonymous"></script>
+  <!-- CSS solo usado para esta plantilla -->
+  <link rel="stylesheet" type="text/css" href="css/compra.css">
+  <!-- LOCAL CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/clases.css">
+</head>
+<body>
+	<header>
+		<div class="navbar navbar-dark">
+			<img src="img/eldial.png">
+			<div id="escudo">
+				<img src="img/compra-segura.svg">
+				<p class="small mb-0"><strong>Compra Segura</strong> <br> 100% protegido</p>
+			</div>
+		</div>
+	</header>
+
+	<main>
+	<div class="container py-3 py-md-5">
+			<form class="row">
+
+				<div class="col-md-8 order-md-0 order-1">
+
+					<!-- Email del contacto -->
+					<div class="mb-3" id="contacto">
+						<h2>DATOS DE CONTACTO</h2>	
+						<div>
+							<input class="form-control" type="email" name="email" placeholder="Email">
+							<p class="error-input" data-error="email"><i class="fas fa-exclamation-triangle"></i>Por favor ingresá tu email</p>
+						</div>		
+					</div>
+
+					<!-- Opciones para elegir obtención de pedido -->
+					<div class="mb-3" id="form-principal">
+						<h2>ELEGÍ COMO OBTENER TU PEDIDO</h2>
+						<div class="container">
+						<div class="row">
+							<div class="col-md-4 col-12">
+								<p id="enviar-domicilio" class="btn btn-block opciones-compra">Enviar a mi domicilio</p>
+							</div>
+							<div class="col-md-4 my-2 my-md-0 col-12">
+								<p id="compra-online" class="btn btn-block opciones-compra">Compra online</p>
+							</div>
+							<div class="col-md-4 col-12">
+								<p id="retirar-pedido" class="btn btn-block opciones-compra">Retirar mi pedido</p>
+							</div>
+						</div>
+						</div>
+
+						<!-- Formulario enviar a domicilio -->
+						<div id="form-domicilio">
+							<div class="row no-gutters">
+								<div class="col-12">
+									<h3>Datos del destinatario</h3>
+								</div>	
+								<div class="col-sm-6 col-12 form-group">
+									<label class="text-muted small" for="nombre-domicilio">Nombre completo</label>
+									<input id="nombre-domicilio" class="form-control" type="text" name="nombre-domicilio">
+									<p class="error-input" data-error="nombre-domicilio"><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un nombre completo</p>
+								</div>
+								<div class="col-sm-6 col-12 form-group">
+									<label class="text-muted small" for="tel-domicilio">Teléfono *</label>
+									<input id="tel-domicilio" class="form-control" type="text" name="tel-domicilio" placeholder="ej: 5491500001111">
+									<p class="error-input" data-error="tel-domicilio"><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un teléfono</p>
+								</div>
+								<div class="col-12">
+									<h3>Domicilio del destinatario</h3>
+								</div>	
+								<div class="col-sm-4 col-12 form-group">
+									<label class="text-muted small">Provincia</label>
+									<select class="form-control" name="provincia">
+										<option value="buenos-aires">Buenos Aires</option>
+										<option value="capital">Capital Federal</option>
+										<option value="catamarca">Catamarca</option>
+										<option value="chaco">Chaco</option>
+										<option value="chubut">Chubut</option>
+										<option value="cordoba">Córdoba</option>
+										<option value="entre-rios">Entre Ríos</option>
+										<option value="formosa">Formosa</option>
+										<option value="corrientes">Corrientes</option>
+										<option value="jujuy">Jujuy</option>
+										<option value="la-pampa">La Pampa</option>
+										<option value="la-rioja">La Rioja</option>
+										<option value="mendoza">Mendoza</option>
+										<option value="misiones">Misiones</option>
+										<option value="santa-fe">Santa Fe</option>
+										<option value="santa-cruz">Santa Cruz</option>
+										<option value="rio-negro">Rio Negro</option>
+										<option value="salta">Salta</option>
+										<option value="santiago-del-estero">Santiago del Estero</option>
+										<option value="san-luis">San Luis</option>
+										<option value="san-juan">San Juan</option>
+										<option value="tierra-del-fuego">Tierra del Fuego</option>
+										<option value="tucuman">Tucumán</option>
+									</select>
+									<label class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor elige una provincia</label>
+								</div>
+								<div class="col-sm-4 col-12 form-group">
+									<label for="ciudad-domicilio" class="text-muted small" for="ciudad-domicilio">Ciudad</label>
+									<input id="ciudad-domicilio" class="form-control" type="text" name="ciudad">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá una ciudad</p>
+								</div>
+								<div class="col-sm-4 col-12 form-group">
+									<label for="barrio-domicilio" class="text-muted small" for="barrio-domicilio">Barrio _</label>
+									<input id="barrio-domicilio" class="form-control" type="text" name="barrio">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un barrio</p>
+								</div>
+								<div class="col-md-6 col-6 form-group">
+									<label class="text-muted small" for="calle-domicilio">Calle</label>
+									<input id="calle-domicilio" class="form-control" type="text" name="calle">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá una calle</p>
+								</div>
+								<div class="col-md-2 col-3 form-group">
+									<label class="text-muted small" for="num-domicilio">Nº</label>
+									<input id="num-domicilio" class="form-control" type="text" name="num">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un número</p>
+								</div>
+								<div class="col-md-2 col-3 form-group">
+									<label class="text-muted small" for="depto-domicilio">Depto. _</label>
+									<input id="depto-domicilio" class="form-control" type="text" name="depto">
+								</div>
+								<div class="col-md-2 col-sm-6 form-group">
+									<label class="text-muted small" for="cp-domicilio">C.P.</label>
+									<input id="cp-domicilio" class="form-control" type="text" name="cp">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un Código Postal</p>
+								</div>
+								<span class="w-100 mb-0 small">* Obligatorio</span>
+								<span class="w-100 mb-0 small">_ Opcional</span>
+							</div>
+						</div>		
+
+						<!-- Formulario retirar pedido -->
+						<div id="form-pedido">
+							<h3>Datos de la persona que retirará el pedido</h3>
+							<label for="nombre-pedido" class="small text-muted">Nombre Completo</label>
+							<input id="nombre-pedido" class="form-control" type="text" name="nombre-pedido">
+							<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un nombre completo</p>
+							<label for="cp-pedido" class="small text-muted">Código Postal</label>
+							<input id="cp-pedido" class="form-control" type="text" name="cp-pedido">
+							<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un Código Postal</p>
+						</div>
+					</div>
+
+					<!-- Campo de DNI o CUIL -->
+					<div id="contenedor-facturacion">
+						<p class="small text-secondary">Vamos a usar estos datos para emitir la factura de compra</p>
+						<div>
+							<label for="dni" class="small text-muted">DNI o CUIL (obligatorio)</label>
+							<input id="dni" class="form-control" type="text" name="dni">
+							<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá tu número de documento</p>
+						</div>		
+						<!-- Checkbox que habilita datos de facturación -->
+						<div class="form-check form-group">
+							<input id="checkbox-facturacion" type="checkbox" class="form-check-input" checked="checked">
+							<label for="checkbox-facturacion" class="form-check-label">Usar los datos de envío como datos de facturación</label>
+						</div>		
+						<!-- Formulario de facturación -->
+						<div id="datos-facturacion">
+							<h2>DOMICILIO DE FACTURACIÓN</h2>
+
+							<h3>Datos de la persona que pagará el pedido</h3>
+
+							<div class="row"> 
+								<div class="col-sm-6 col-12 form-group">
+									<label class="text-muted small">Nombre completo</label>
+									<input class="form-control" type="text" name="nombre-facturacion">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un nombre completo</p>
+								</div>
+
+								<div class="col-sm-6 col-12 form-group">
+									<label class="text-muted small" for="tel-domicilio">Teléfono *</label>
+									<input id="tel-domicilio" class="form-control" type="text" name="tel-facturacion" placeholder="ej: 5491500001111">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un teléfono</p>
+								</div>						
+							</div>
+
+							<h3>Domicilio de la persona que pagará el pedido</h3>
+
+							<div class="row">
+								<div class="col-sm-4 col-12 form-group">
+									<label class="text-muted small">Provincia</label>
+									<select class="form-control" name="provincia">
+										<option value="buenos-aires">Buenos Aires</option>
+										<option value="capital">Capital Federal</option>
+										<option value="catamarca">Catamarca</option>
+										<option value="chaco">Chaco</option>
+										<option value="chubut">Chubut</option>
+										<option value="cordoba">Córdoba</option>
+										<option value="entre-rios">Entre Ríos</option>
+										<option value="formosa">Formosa</option>
+										<option value="corrientes">Corrientes</option>
+										<option value="jujuy">Jujuy</option>
+										<option value="la-pampa">La Pampa</option>
+										<option value="la-rioja">La Rioja</option>
+										<option value="mendoza">Mendoza</option>
+										<option value="misiones">Misiones</option>
+										<option value="santa-fe">Santa Fe</option>
+										<option value="santa-cruz">Santa Cruz</option>
+										<option value="rio-negro">Rio Negro</option>
+										<option value="salta">Salta</option>
+										<option value="santiago-del-estero">Santiago del Estero</option>
+										<option value="san-luis">San Luis</option>
+										<option value="san-juan">San Juan</option>
+										<option value="tierra-del-fuego">Tierra del Fuego</option>
+										<option value="tucuman">Tucumán</option>
+									</select>
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor elige una provincia</p>
+								</div>
+								<div class="col-sm-4 col-12 form-group">
+									<label for="ciudad-domicilio" class="text-muted small" for="ciudad-domicilio">Ciudad</label>
+									<input id="ciudad-domicilio" class="form-control" type="text" name="ciudad">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá una ciudad</p>
+								</div>
+								<div class="col-sm-4 col-12 form-group">
+									<label for="barrio-domicilio" class="text-muted small" for="barrio-domicilio">Barrio _</label>
+									<input id="barrio-domicilio" class="form-control" type="text" name="barrio">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un barrio</p>
+								</div>
+								<div class="col-md-6 col-6 form-group">
+									<label class="text-muted small" for="calle-domicilio">Calle</label>
+									<input id="calle-domicilio" class="form-control" type="text" name="calle">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá una calle</p>
+								</div>
+								<div class="col-md-2 col-3 form-group">
+									<label class="text-muted small" for="num-domicilio">Nº</label>
+									<input id="num-domicilio" class="form-control" type="text" name="num">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un número</p>
+								</div>
+								<div class="col-md-2 col-3 form-group">
+									<label class="text-muted small" for="depto-domicilio">Depto. _</label>
+									<input id="depto-domicilio" class="form-control" type="text" name="depto">
+								</div>
+								<div class="col-md-2 col-sm-6 form-group">
+									<label class="text-muted small" for="cp-domicilio">C.P.</label>
+									<input id="cp-domicilio" class="form-control" type="text" name="cp">
+									<p class="error-input" data-error=""><i class="fas fa-exclamation-triangle"></i>Por favor ingresá un Código Postal</p>
+								</div>
+
+								<span class="w-100 mb-0 small">* Obligatorio</span>
+								<span class="w-100 mb-0 small">_ Opcional</span>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Contenedor de la lista de compras -->
+				<div id="contenedor-lista" class="col-md-4 order-md-1 order-0 mb-3">
+					<!-- Botón lista compra en móbiles -->
+					<div id="btn-lista-compra" class="d-flex d-md-none">
+						<i class="fas fa-angle-double-down"></i>
+						<span>Ver detalles de mi compra</span>
+						<span class="ml-auto font-weight-bold">$4500</span>
+					</div>	
+					<!-- Contenedor de la compra => Productos y precio final -->
+					<div id="contenedor-compra">
+						<!-- Contenedor productos -->
+						<div id="contenedor-productos">
+							<div class="producto-lista row no-gutters">
+								<div class="col-md-3 col-2">
+									<img class="img-lista img-fluid" src="img/ejemplo-libro.jpg">
+								</div>
+								<div class="col-md-7 col-8">
+									<p class="titulo-lista">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+								</div>
+								<div class="col-2">
+									<p class="precio-lista">$1500</p>
+								</div>
+							</div>
+							<div class="producto-lista row no-gutters">
+								<div class="col-md-3 col-2">
+									<img class="img-lista img-fluid" src="img/ejemplo-libro.jpg">
+								</div>
+								<div class="col-md-7 col-8">
+									<p class="titulo-lista">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+								</div>
+								<div class="col-2">
+									<p class="precio-lista">$1500</p>
+								</div>
+							</div>
+							<div class="producto-lista row no-gutters">
+								<div class="col-md-3 col-2">
+									<img class="img-lista img-fluid" src="img/ejemplo-libro.jpg">
+								</div>
+								<div class="col-md-7 col-8">
+									<p class="titulo-lista">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+								</div>
+								<div class="col-2">
+									<p class="precio-lista">$1500</p>
+								</div>
+							</div>
+							<div class="producto-lista row no-gutters">
+								<div class="col-md-3 col-2">
+									<img class="img-lista img-fluid" src="img/ejemplo-libro.jpg">
+								</div>
+								<div class="col-md-7 col-8">
+									<p class="titulo-lista">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+								</div>
+								<div class="col-2">
+									<p class="precio-lista">$1500</p>
+								</div>
+							</div>
+
+							<div class="producto-lista row no-gutters">
+								<div class="col-md-3 col-2">
+									<img class="img-lista img-fluid" src="img/ejemplo-libro.jpg">
+								</div>
+								<div class="col-md-7 col-8">
+									<p class="titulo-lista">Libro: E-Mails, chats, WhatsApp, SMS, Facebook, filmaciones con teléfonos móviles y otras tecnologías.</p>
+								</div>
+								<div class="col-2">
+									<p class="precio-lista">$1500</p>
+								</div>
+							</div>																		
+						</div>
+
+						<div id="lista-subtotal" class="d-flex justify-content-between">
+							<span>Subtotal</span>
+							<span>$5400</span>
+						</div>
+						<div id="lista-total" class="d-flex justify-content-between">
+							<span>Total</span>
+							<span>$5400</span>
+						</div>	
+					</div>
+
+				</div>
+
+
+
+			<div class="col-md-8 order-4 mt-3 d-flex justify-content-end">
+				<button class="btn w-50 btn-rojo" type="submit">Continuar</button>
+			</div>
+		</form>
+	</div>
+	</main>
+
+	<!-- JQUERY.JS / POPPER.JS / BOOTSTRAP.JS -->
+	<script src="js/librerias/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Librerias JS -->
+  <script type="text/javascript" src="js/librerias/anime.min.js"></script>
+	<!-- JS LOCAL -->
+	<script type="text/javascript" src="js/compra.js"></script>
+</body>
+</html>

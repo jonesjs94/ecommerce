@@ -1,0 +1,218 @@
+.navbar img {
+	width: 6rem;
+}
+
+#escudo {
+	display: flex;
+}
+
+#escudo img {
+	width: 3rem;
+}
+
+#escudo p {
+	padding: 0 .5rem;
+  background: #aac67c;
+  color: #00400e;
+}
+
+h2 {
+	font-size: 1.2rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+form .row div[class^="col-"] {
+	padding: 0 3px;
+}
+
+p.btn {
+	cursor: pointer;
+}
+
+/* ---------------------- Formulario ---------------------- */
+label {
+	font-size: 80%;
+	margin-bottom: 0;
+}
+
+.opciones-compra {
+	font-size: 90%;
+	text-align: center;
+	border: 1px solid #9f131d;
+	color: #9f131d;
+	font-weight: 600;
+}
+
+.opciones-compra:hover {
+	background: #A4313A;
+	color: #fff;
+	border: 1px solid #A4313A;	
+}
+
+.opciones-compra-activo {
+	border: 1px solid #630008;
+
+	background: #630008;
+	color: #fff;
+}
+
+.opciones-compra-activo:hover {
+	background: #630008 !important;
+	color: #fff !important;
+	border: 1px solid #630008;	
+}
+
+#contacto {
+	margin-bottom: 20px;
+}
+
+#form-principal,
+#contacto,
+#contenedor-facturacion {
+	width: 100%;
+	padding: 1rem 2rem 2rem 2rem;
+	border: 1px solid rgb(0,0,0,.125);
+	box-shadow: 1px 1px 5px 0px #8c8c8c;
+}
+
+#datos-facturacion {
+	display: none;
+}
+
+#form-domicilio,
+#form-pedido {
+	display: none;
+}
+
+h3 {
+	font-size: 90%;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	font-size: 90%;
+}
+
+.error-input {
+	font-size: 75%;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 0;
+	display: none;
+}
+
+.error-input .fa-exclamation-triangle {
+	color: red;
+	margin-right: 5px;
+}
+
+/* ---------------------- Lista de compras ---------------------- */
+#contenedor-productos {
+	max-height: 380px;
+	overflow-y: scroll;
+}
+
+	#btn-lista-compra {
+		display: none;
+		padding: .5rem;
+		margin-bottom: 10px;
+		border: 1px solid #153f68;
+	}
+
+.producto-lista {
+	margin-top: .5rem;
+}
+
+.titulo-lista,
+.precio-lista {
+	font-size: 12px;
+}
+
+#lista-subtotal {
+	font-size: 90%;
+	padding: .5rem;
+}
+
+#lista-total {
+	background: #153f68;
+	color: white;
+	font-size: 110%;
+	padding: .5rem;
+}
+
+#contenedor-productos::-webkit-scrollbar {
+	width: 3px;
+}
+
+#contenedor-productos::-webkit-scrollbar-thumb {
+	background: #656565;
+}
+
+
+/* ---------------------------------------- Media Querys ---------------------------------------- */
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+	h2 {
+		font-size: 1rem;
+	}
+
+	#contacto,
+	#pedido,
+	#contenedor-facturacion {
+		padding: .5rem 1rem 1rem 1rem;
+	}
+
+	#contenedor-lista {
+		position: initial;
+	}
+
+	#contenedor-compra {
+		display: none;
+	}
+
+	#btn-lista-compra {
+		display: block;
+	}
+
+	#btn-lista-compra span,
+	#btn-lista-compra i {
+		font-size: 80%;
+	}
+
+	#btn-lista-compra i {
+		display: flex;
+	  margin: 0 12px;
+	}
+	.fa-angle-double-down:before {
+     margin: auto 0;
+  }
+
+  .producto-lista .col-2 {
+  	text-align: center;
+  }
+}
+
+/*Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	#lista-compra {
+		right: 40px;
+	}
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+	#lista-compra {
+		max-width: 320px;
+		right: 0;
+	}
+}

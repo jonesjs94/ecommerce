@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tienda elDial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<!-- BOOTSTRAP.CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/52fc4e6af1.js" crossorigin="anonymous"></script>
+  <!-- LOCAL CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/clases.css">
+  <link rel="stylesheet" type="text/css" href="css/media-query.css">
+</head>
+<body>
+
+	<div id="contenedor-vacio"></div>
+
+	<header>
+		<!-- Navegador -->
+		<nav id="navegador">
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<!-- Categorías del Menú -->
+			<div id="categorias">
+				<div role="button" id="icono-categorias">
+					<i class="fas fa-align-left mr-1"></i> Categorias
+				</div>
+				<div id="contenedor-categorias" class="d-none">
+					<div id="menu-cat-1" class="menu-categorias">
+						<ul class="nav flex-column">
+							<li class="d-flex justify-content-between" id="prueba" onmouseover="desplegarCat(1, 'libros')">Libros<i class="fas fa-caret-right my-auto"></i></li>
+							<li class="d-flex justify-content-between" onmouseover="desplegarCat(1, 'cursos')">Cursos<i class="fas fa-caret-right my-auto"></i></li>
+							<li class="d-flex justify-content-between" onmouseover="desplegarCat(1, 'suscripciones')">Suscripciones<i class="fas fa-caret-right my-auto"></i></li>
+						</ul>
+					</div>
+					<div id="menu-cat-2" class="menu-categorias"></div>
+					<div id="menu-cat-3" class="menu-categorias"></div>
+					<div id="menu-cat-4" class="menu-categorias"></div>
+				</div>
+			</div>
+			<!-- Formulario de búsqueda -->
+			<form id="form-busqueda-navegador" method="GET" action="">
+					<input class="form-control" type="text" name="busqueda" placeholder="Libros, ebooks, cursos ...">
+					<button class="btn btn-rojo" type="submit"><i class="fas fa-search"></i></button>
+			</form>
+			<!-- Menú secundario -->
+			<ul class="nav navbar">
+				<li class="nav-item btn-group">
+					<a class="nav-link  dropdown-toggle" href="#" id="ayuda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+					<div class="dropdown-menu" aria-labelledby="ayuda">
+						<a class="dropdown-item" href="#">Como comprar</a>
+						<a class="dropdown-item" href="#">Preguntas frecuentes</a>
+						<a class="dropdown-item" href="#">Contáctenos</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="micuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+					<div class="dropdown-menu" aria-labelledby="micuenta">
+						<span id="btn-iniciar-sesion" class="dropdown-item">Iniciar Sesión</span>
+						<span class="dropdown-item" href="#">Crear Cuenta</span>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Navegador celular -->
+		<nav id="navegador-celular">
+			<div class="d-flex">
+				<a class="btn btn-light btn-celular" role="button" href="#"><i class="fas fa-bars"></i></a>
+				<a class="btn btn-light btn-celular" role="button" href="#"><i class="fas fa-search"></i></a>				
+			</div>
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<div class="d-flex">
+				<a class="btn btn-light btn-celular" role="button" href="#"><i class="fas fa-user-tie"></i></a>
+				<a class="btn btn-light btn-celular" role="button" href="#"><i class="fas fa-shopping-cart"></i></a>			
+			</div>
+		</nav>
+
+		<!-- Iniciar sesión -->
+		<div id="iniciar-sesion" class="d-none">
+			<form class="" style="transform: translateX(100%);">
+	      <h1 class="h3 pb-4 text-center">Iniciar sesión</h1>
+	      <div class="form-group row">
+	        <label class="col-12" for="correo">Correo Electrónico:</label>
+	        <div class="col-12">
+	          <input id="correo" class="form-control form-control-sm" type="email" name="correo" required>
+	        </div>
+	      </div>
+	      <div class="form-group row">
+	        <label class="col-12" for="tel">Contraseña:</label>
+	        <div class="col-12">
+	          <input id="pass" class="form-control form-control-sm" type="password" name="pass" required>
+	        </div>
+	      </div>
+	      <div class="form-group row d-flex justify-content-center">
+	        <a class="small texto-eldial" href="#">¿Olvidaste la contraseña?</a>
+	      </div>
+	      <button type="submit" class="btn btn-rojo btn-block btn-sm">Entrar</button>
+	      <div class="form-group row d-flex justify-content-center mt-2">
+	        <span class="small mr-1">¿No tenés cuenta? </span><a class="small texto-eldial" href="#"> Registrate</a>
+	      </div>	      
+    	</form>
+		</div>
+
+	</header>
+
+<main>
+
+	<div class="container py-5 small-90">
+		<h1 class="h3 texto-eldial">Términos y Condiciones</h1>
+		<hr>
+		<h2 class="h4">Términos y Condiciones de Uso (Ley 27266)</h2>
+		<br>
+		<p>Por favor lea las siguientes condiciones de servicio antes de usar www.eldial.com y/o www.eldial.com.ar y/o tienda.eldial.com y/o demás subdominios y su contenido (en adelante "ELDIAL.COM"). Advierta que usando ELDIAL.COM, ya sea como cliente y/usuario y/o como simple visitante, Ud. acepta y consiente estos Términos y Condiciones de Uso.</p>
+
+		<p class="font-weight-bold">1. RECONOCIMIENTO Y ACEPTACIÓN DE LAS CONDICIONES DE SERVICIO</p>
+
+		<p>Estos Términos y Condiciones del Servicio regulan las relaciones jurídicas entre ALBREMATICA S.A., propietaria de ELDIAL.COM (en adelante, 'ALBREMATICA') y Ud., como simple visitante y/o usuario y/o cliente de los productos y servicios de ALBREMATICA (en adelante, el 'Cliente'), en especial el acceso al servicio web ELDIAL.COM y/o las Ediciones Especiales y/o cualquiera otros servicios web que operen con la marca y/o denominación ALBREMATICA (el 'Servicio'). El uso de cualquier producto y servicio, incluyendo sin limitación materiales, información, contenidos, software, imágenes, ilustraciones, diseños, íconos y cualquier otro contenido que está o esté en el futuro en ELDIAL.COM está sujeto a estos Términos y Condiciones de uso y cualquier uso de los mismos constituye una aceptación por parte del Cliente de estos Términos y Condiciones.</p>
+
+		<p>En el caso de que el Cliente sea una Persona Jurídica, la persona que acepta estos Términos y Condiciones asegura que está autorizada por el Cliente para aceptar estos Términos y Condiciones en su nombre y obligar al Cliente.</p>
+
+		<p class="font-weight-bold">2. MODIFICACIÓN DE LOS TÉRMINOS Y CONDICIONES GENERALES</p>
+
+		<p>ALBREMATICA puede, en cualquier momento, modificar los Términos y Condiciones del Servicio. Las versiones actualizadas de los Términos y Condiciones aparecerán en ELDIAL.COM y serán de aplicación inmediata. El Cliente es responsable de revisar regularmente los Términos y Condiciones. La continuación en el uso del Servicio constituye una aceptación de las modificaciones introducidas.</p>
+
+		<p class="font-weight-bold">3. TÉRMINOS ADICIONALES</p>
+
+		<p>El uso del Cliente del Servicio se ajustará a estos Términos y Condiciones y a las "Políticas de Privacidad" y "Aviso de derecho de autor" que puedan existir para materiales específicos y se encuentran vigentes en www.eldial.com. El uso del Servicio, el registro en el mismo, así como la compra o suscripción de cualquier producto o servicio de ALBREMATICA constituyen una aceptación por parte del Cliente de los Términos y Condiciones, a las Políticas de Privacidad y Aviso de derecho de autor de ELDIAL.COM y/o ALBREMATICA. Si el Cliente no está de acuerdo con cualquiera de estos términos y condiciones, el Cliente y/o Usuario y/o simple visitante no está autorizado a usar el Servicio y/o ELDIAL.COM.</p>
+
+		<p class="font-weight-bold">4. REGISTRO</p>
+
+		<p>El acceso al Servicio puede ser gratuito para determinados contenidos específicos, puede requerir pago o puede estar limitado a Clientes.</p>
+
+		<p>Cuando el Cliente se registra, compra o se suscribe consiente en proporcionar información completa y veraz, siendo responsable de su actualización (por ej. se tendrá por válido la cuenta de e-mail que figure en el registro hasta sea modificada por el Cliente). Una vez el registro es completo, enviado el correspondiente formulario de suscripción y establecida la modalidad de pago, el Cliente recibe un nombre de usuario y una contraseña que es única para cada Cliente. El Cliente puede, en cualquier momento que lo desee, modificar su contraseña a través del sitio. Se tendrán por válidas todas las comunicaciones de ALBREMATICA al Cliente a través de la cuenta de e-mail registrada.</p>
+
+		<p class="font-weight-bold">5. PERSONAS AUTORIZADAS. LICENCIAS DE USO</p>
+
+		<p>Cada nombre de usuario y contraseña (en adelante, "Licencia") sólo podrá ser usado por un sólo individuo. En el caso de contratar una sola Licencia, el Cliente conoce y acepta que será la única persona autorizada para usar esa Licencia, según la cantidad de accesos contratada.</p>
+
+		<p>En el caso de suscripción por una Persona Jurídica, el Servicio sólo podrá ser usado por las personas que trabajen en dicha Persona Jurídica, mientras sigan trabajando en la misma. A estos efectos, la Licencia es única, individual e intransferible y se otorga a cada una de las personas físicas que puedan usar el Servicio dentro de cada Persona Jurídica. La persona designada por el Cliente como Administrador de las Claves deberá otorgar -y mantener actualizados- a ALBREMATICA los datos de los usuarios autorizados para para acceder al Servicio contratado hasta alcanzar el número de licencias contratado. En este caso, el uso del Servicio por parte de los usuarios finales supone una aceptación expresa de los Términos y Condiciones. En determinadas circunstancias, ALBREMATICA podrá habilitar un acceso ilimitado desde el rango de IP del Cliente (en adelante "Acceso Corporativo"), requiriendo o, no, la creación de cuentas personales por parte de los usuarios finales que usen el servicio.</p>
+
+		<p>El Cliente reconoce y acepta que sólo podrán usar el Servicio las personas que efectivamente lo han contratado. Queda terminantemente prohibida la comunicación o cesión de los datos de acceso con otros individuos o personas jurídicas. Tampoco se permite compartir una suscripción entre varias personas físicas o Jurídicas. El Cliente es responsable de no permitir que terceras partes no autorizadas tengan acceso a los datos de acceso o, en su caso, compartir su rango de IP. Queda prohibido el uso de sistemas de VPN, u otros sistemas similares, que permitan acceder a ELDIAL.COM desde fuera del rango de IP permitido, salvo que expresamente se indique lo contrario en el formulario de suscripción.</p>
+
+		<p>El acceso no autorizado realizado incumpliendo estas prohibiciones se considerará como compras individuales de documentos realizadas por el Cliente cuyo nombre de usuario y contraseña se haya usado, y ALBREMATICA quedará facultada para facturar y exigir el pago de estas compras individuales o, en su defecto, cancelar la suscripción y reclamar por los daños y perjuicios ocasionados.</p>
+
+		<p>El Cliente es responsable de notificar a ALBREMATICA de cualquier uso no autorizado de su nombre de usuario y será responsable también de cualquier daño y perjuicio, así como de los costos que se incurran por razón del mismo incluyendo las costas extrajudiciales y/o judiciales.</p>
+
+		<p class="font-weight-bold">6. ACCESO AL SITIO WEB, LICENCIA Y LIMITACIONES DE USO</p>
+
+		<p>ALBREMATICA concede al Cliente una licencia de uso no-exclusiva, individual e intransferible, revocable y limitada, para acceder y usar el Servicio contratado de conformidad a estos Términos y Condiciones. La cantidad de accesos contratados del Servicio son MENSUALES y NO ACUMULATIVOS, salvo para aquellas modalidades de Plan de Accesos ilimitado y/o Ediciones Especiales. Es decir, los accesos que se contraten corresponden a cada mes y en caso de no agotar la cantidad de accesos contratada en un mes, no se acumularán al mes siguiente, sino que comenzará nuevamente de CERO. Por ejemplo, para el caso de haber contratado 150 (ciento cincuenta) accesos mensuales, en caso de haber consumido sólo 140 (ciento cuarenta) en enero, para las cero horas del 1 de febrero, comenzará a tener 0 accesos mensuales consumidos y la disponibilidad de uso de 150 (ciento cincuenta) accesos. Para el caso de contratar una Edición Especial, los accesos serán ilimitados por el plazo de hasta 6 (seis) meses, luego caducará la suscripción.</p>
+
+		<p>El Cliente reconoce que el uso del Servicio se realiza bajo su exclusiva responsabilidad y que sólo se autoriza el uso de dicho Servicio para un uso personal o profesional, pero no para su explotación comercial. La Licencia de Uso concedida al Cliente incluye el derecho a visualizar electrónicamente los contenidos incluidos en el Servicio contratado, así como el derecho a descargarse en formato electrónico y/o imprimir porciones no sustanciales de sus contenidos y/o el envío por correo electrónico para el exclusivo uso profesional por parte del Cliente. Se prohíbe expresamente la descarga completa de fallos, leyes, doctrinas, comentarios a fallos, opiniones de autores, imágenes, libros, e-books, revistas o de cualquier otro contenido sea cual sea el uso final que se quiera hacer de dichos contenidos, reservándose ALBREMATICA el derecho a reclamar por los daños y perjuicios que se ocasionen.</p>
+
+		<p>El Cliente puede reproducir parte de los documentos incluidos en el Servicio debiendo citar según se le indica en cada uno (Ej. [elDial.com - AA692D]). A excepción de este caso, el Cliente no puede copiar, duplicar, reproducir, vender, descargar, revender, republicar, transmitir cualquier parte del Servicio y/o de su contenido ya sea para uso comercial o no comercial. El Cliente no puede sublicenciar, descompilar, alquilar, vender, realizar ingeniería inversa, o crear obras derivadas del Servicio y/o de su contenido. El Cliente no puede usar técnicas de framing para esconder la marca, logo u otras porciones del Servicio sin la autorización previa y por escrito de ALBREMATICA.</p>
+
+		<p>El Cliente no puede usar software automatizado o proceso manual, así como robots o spiders para copiar o monitorizar el servicio de ELDIAL.COM y/o su contenido sin la autorización previa y por escrito de ALBREMATICA. El Cliente no puede manipular o usar el contenido de ELDIAL.COM para crear publicaciones y/o servicios de cualquier tipo y, en especial, de aquellos que puedan ser comparables o que compitan de cualquier forma con las publicaciones y/o el contenido que ALBREMATICA ofrece ahora o pueda ofrecer en el futuro. Se prohíbe expresamente la inclusión de contenidos de ELDIAL.COM en cualquier base de datos, de cualquier tipo, sin importar su formato o si son de acceso público o privado, de pago o gratuitas.</p>
+
+		<p class="font-weight-bold">7. CONTENIDOS DEL USUARIO Y/O CLIENTE</p>
+
+		<p>Al añadir o proporcionar cualquier contenido, información o material a ELDIAL.COM (como etiquetas, logos, comentarios, palabras clave, documentos, y otros) el Cliente concede a ALBREMATICA (o asegura la persona autorizada que la Persona Jurídica ha concedido expresamente) un derecho y licencia perpetuo, mundial, gratuito, irrevocable y no-exclusivo para usar, reproducir, modificar, adaptar, publicar, mostrar públicamente, traducir, crear obras derivadas o distribuir dichos materiales o incluir dichos materiales en cualquier forma, medio o tecnología, existente en la actualidad o que exista en el futuro. La mención en el Servicio a que un contenido será "privado" debe entenderse como que ALBREMATICA procurará que dicho contenido sólo pueda ser accedido por dicho Cliente con carácter general, pero por la propia naturaleza de los servicios de Internet ALBREMATICA no puede garantizar que terceros usuarios puedan tener acceso puntual a dicho contenido, ya sea por error técnico o por cualquier otra causa. El Cliente declara conocer esta circunstancia y mantendrá indemne a ALBREMATICA y/o ELDIAL.COM, sus socios, directores y/o empleados, de cualquier reclamación por dicho motivo.</p>
+
+		<p class="font-weight-bold">8. CONTENIDOS INCLUIDOS. COPYRIGHT.</p>
+
+		<p>Sin perjuicio de lo indicado en www.eldial.com, sección "Aviso de derecho de autor", sección que el Cliente conoce y acepta, la información y los documentos contenidos en ELDIAL.COM (en adelante, los "Documentos") son propiedad de ALBREMÁTICA, encontrándose protegidos por las Leyes de Derecho de Autor, Marcas, Lealtad Comercial, Bases de Datos y otras normas. Consecuentemente, está prohibida la difusión, transmisión, modificación, copia, reproducción y/o distribución total o parcial de los Documentos, en cualquier forma y por cualquier medio, sin la previa autorización escrita de ALBREMÁTICA. Asimismo, queda prohibido cualquier uso de los Documentos o de parte de los mismos con fines comerciales. La violación de los derechos antes señalados puede acarrear condenas civiles y/o penales establecidas en las normas precedentemente citadas. Se exigirán responsabilidades a los infractores por todas las vías disponibles en derecho.</p>
+
+		<p>ALBREMATICA dará acceso al Cliente a los contenidos incluidos en ese momento en su suscripción durante el período de tiempo contratado. Sin embargo, ALBREMATICA podrá modificar en cualquier momento los contenidos o funcionalidades de sus productos y servicios para adaptarlos a su estrategia comercial o de productos, sin que ello pueda motivar cancelación anticipada del Servicio.</p>
+
+		<p>Todos los contenidos incluidos en los Productos y Servicios de ALBREMATICA están sujetos a derechos de Propiedad Intelectual e Industrial de ALBREMATICA y/o de terceras partes. El acceso al Servicio o a dichos contenidos por parte del Cliente en ningún caso implica ningún tipo de renuncia, transmisión o cesión total o parcial de dichos derechos, ni confiere ningún derecho de utilización, licencia, alteración, explotación, reproducción, distribución o comunicación pública sobre dichos contenidos distintos de los expresamente enunciados en estas condiciones generales, sin la previa y expresa autorización específicamente otorgada, a tal efecto, por parte de ALBREMATICA. El Cliente no pasa a ser propietario ni adquiere ningún derecho sobre los contenidos de ALBREMATICA y/o ELDIAL.COM, y reconoce expresamente que el Servicio y los contenidos de ELDIAL.COM están protegidos por derechos de Propiedad Intelectual e Industrial.</p>
+
+		<p>El Cliente se obliga a no eliminar la referencia al copyright, marcas y patentes, en las impresiones de documentos, incluida en los productos y servicios de ALBREMATICA.</p>
+
+		<p>En el Servicio pueden aparecer contenidos suministrados por terceras partes. ALBREMATICA y/o ELDIAL.COM no hace suyas las opiniones expresadas por dichas terceras partes o por los autores. En especial, ALBREMATICA y/o ELDIAL.COM no es responsable por ningún error, omisión, opinión, no-actualización o cualquier afirmación realizada en los contenidos de terceras partes en su sitio web. ALBREMATICA y/o ELDIAL.COM respeta los Derechos de Propiedad Intelectual y cumple con la normativa vigente. Los licenciantes de los artículos de periódicos, revistas, libros, tratados, doctrinas, comentarios a fallos, opiniones de autores, editoriales, monografías y otros materiales han asegurado a ALBREMATICA y/o ELDIAL.COM que tienen el derecho a autorizar la publicación, distribución electrónica y comercialización de los materiales que han proporcionado a ALBREMATICA y/o ELDIAL.COM.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM no se hace responsable de las expresiones de los autores de los artículos de doctrina, notas de opinión, comentarios a fallos, editoriales, modelos de escritos judiciales, notificaciones y/o contratos, liquidador laboral, así como libros, ensayos y/o cualquier otro aporte académico y/o bibliográfico, la que corre por cuenta de los mismos exclusivamente y las cuales constituyen meras posiciones doctrinales académicas y no deben ser tomadas como consejo jurídico aplicables a casos en particular.</p>
+
+		<p class="font-weight-bold">9. EXCLUSIÓN DE GARANTÍAS Y LIMITACIÓN DE RESPONSABILIDAD</p>
+
+		<p>ALBREMATICA y las terceras partes proveedoras de contenidos no ofrecen garantías de ningún tipo, ni expresas ni implícitas, con respecto al funcionamiento del Servicio y su contenido, incluyendo traducciones. El Cliente expresamente afirma que el uso de ELDIAL.COM y su contenido se realiza bajo su exclusiva responsabilidad.</p>
+
+		<p>ALBREMATICA excluye todas las garantías, expresas e implícitas, hasta el límite máximo previsto por la legislación aplicable, incluyendo, pero no limitándose, a la garantía de que la información suministrada es correcta, confiable, precisa, completa, adecuada, o pertinente para un propósito particular, o que ELDIAL.COM o sus contenidos no tiene errores en contenido o funcionalidad, o que los servidores dónde está el servicio son libres de virus.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM no será responsable de ningún daño por razón del uso o imposibilidad de uso del Servicio o sus contenidos, incluyendo pero no limitándose a cualquier daño directo o indirecto, causal o de cualquier tipo incluyendo las costas extrajudiciales y/o judiciales.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM, sus socios, directores y/o empleados, las terceras partes proveedoras de contenidos, no serán responsables por ningún daño (incluyendo sin limitación las costas extrajudiciales y/o judiciales, el daño emergente o el lucro cesante) por razón de ELDIAL.COM, incluyendo su contenido.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM, sus socios, directores y/o empleados no serán responsables por falta de disponibilidad del servicio en un momento determinado, ya sea por causas técnicas, tareas de mantenimiento del sistema, interferencias, interrupciones de los suministradores del servicio internet o por cualquier otra causa.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM, y el Cliente serán cada uno responsables de la verificación y del control de la faz técnica y operativa de sus respectivas facilidades.</p>
+
+		<p>El Cliente conoce los alcances del Servicio, y ALBREMATICA y/o ELDIAL.COM, no será responsable ni expresa ni implícitamente, de la adecuación de los servicios que proporcione a las necesidades reales del Cliente. Su inadecuación no podrá ser causa de resolución, ni devoluciones de pago. La responsabilidad de ALBREMATICA y/o ELDIAL.COM, en cualquiera de los casos de incumplimiento imputables a éste, estará limitada al importe mensual y/o semestral y/o anual (dependiendo la modalidad de suscripción contratada) de abono al Servicio.</p>
+
+		<p>Dado que ALBREMATICA y/o ELDIAL.COM, depende de los servicios de terceras partes para la adecuada prestación de los que le son propios, declina toda responsabilidad por los daños o perjuicios causados por razones imputables a aquellas. Tampoco es responsable por la completitud, certeza, precisión y/o actualización del contenido de los contenidos, no pudiendo el Cliente efectuar reclamo alguno basado en esos motivos.</p>
+
+		<p>Dado que el buen funcionamiento del Servicio depende de terceras partes, ALBREMATICA y/o ELDIAL.COM, no será responsable del resultado del Servicio. Esto incluye errores de transmisión, retraso en la entrega o interrupciones del Servicio no planificadas.</p>
+
+		<p>Por último, ALBREMATICA y/o ELDIAL.COM, no responderá en caso de utilización del Servicio por terceros no autorizados.</p>
+
+		<p class="font-weight-bold">10. SERVICIOS Y PRODUCTOS DE TERCEROS Y LIMITACIÓN DE RESPONSABILIDAD.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM no será responsable de ningún daño por razón del uso o imposibilidad de uso de servicios de terceros o sus contenidos o de sus productos (como por ejemplo Astrea Virtual, Arizmendi y/o los servicios o productos ofertados como consecuencia de los beneficios o promociones con terceros por alianzas estratégicas, en adelante Prestadores), incluyendo pero no limitándose a cualquier daño directo o indirecto, causal o de cualquier tipo incluyendo las costas extrajudiciales y/o judiciales.</p>
+
+		<p>Asimismo, se deja constancia que deberá estarse a los Términos y Condiciones de Uso de cada servicio, los cuales podrán ser consultados en las páginas web de los Prestadores.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM, y los Prestadores son empresas y sociedades independientes, como así también los servicios que prestan, por ello, por cualquier consulta o reclamo, deberá realizarse el pertinente a cada una de ellas de parte quien lo presta.</p>
+
+		<p class="font-weight-bold">11. NO ASESORAMIENTO JURÍDICO</p>
+
+		<p>En ningún caso se podrá considerar que ALBREMATICA y/o ELDIAL.COM está ofreciendo asesoramiento jurídico o empresarial, o que existe una relación cliente-abogado o que algunas informaciones proporcionados por el Cliente estén protegidas por el Secreto profesional.</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM, y los terceros proveedores de contenidos, no ofrecen garantías, ni expresas ni implícitas, con respecto al Servicio y sus contenidos, su calidad o idoneidad para fines concretos, su exactitud, actualización o carácter completo.</p>
+
+		<p class="font-weight-bold">12. SUPERVISIÓN Y ACTIVIDADES NO AUTORIZADAS</p>
+
+		<p>ALBREMATICA se reserva el derecho a supervisar y guardar registros del uso que realiza el Cliente del Servicio y su contenido, de su historial de búsquedas, de la IP desde la que accede, así como investigar posibles violaciones de estos Términos y Condiciones. ALBREMATICA puede cancelar el acceso al Servicio en caso que se detecten patrones de uso contrarios a lo previsto en estos Términos y Condiciones, especialmente en el caso de descarga excesiva de documentos, acceso por usuarios no autorizados y utilización de la información para uso comercial, como así también puede reclamar los daños y perjuicios que correspondieren.</p>
+
+		<p>El Cliente se abstendrá de utilizar el Servicio con fines o efectos ilícitos, prohibidos en las presentes Términos y Condiciones Generales, lesivos de los derechos e intereses de terceros y de ALBREMATICA, o que de cualquier forma puedan dañar, inutilizar, sobrecargar o deteriorar el Servicio. Salvo prueba en contrario, se entenderá como uso ilícito la descarga desproporcionada de archivos o la utilización de software especializado en descargas de páginas web. En tales casos, ALBREMATICA podrá suspender el servicio y reclamar los daños y perjuicios que correspondieren.</p>
+
+		<p class="font-weight-bold">13. CANCELACION Y BAJA SERVICIO</p>
+
+		<p>ALBREMATICA podrá cancelar automáticamente la suscripción sin necesidad de comunicación previa por parte de ALBREMATICA: (a) en el caso de no abonarse, en el plazo pactado, cualquier factura o vencimiento; (b) en el caso de incumplimiento por parte del Cliente de alguna de las cláusulas de estos Términos y Condiciones, Políticas de Privacidad y Aviso de Derecho de Autor.</p>
+
+		<p>El Cliente podrá solicitar la baja del servicio en cualquier momento que lo desee, debiendo comunicar la misma en forma fehaciente a la casilla de correo: bajas@albrematica.com.ar, o llamando por teléfono al 011-4371-2806 en el horario de 10 a 17 hs., de lunes a viernes, días hábiles o concurriendo personalmente a las oficinas de ALBREMATICA en el horario y días recién mencionados. Para que la baja se haga efectiva y su petición se entienda recepcionada por ALBREMATICA, el cliente deberá recibir en su casilla de correo electrónico denunciado, el certificado de baja correspondiente.</p>
+
+		<p>En caso de que la modalidad de contratación haya sido por débito automático mensual de la tarjeta de crédito o tarjeta de débito del cliente o débito mensual en cuenta bancaria del cliente, se cancelará el servicio a partir del primer día hábil del mes siguiente al del solicitado la baja.</p>
+
+		<p>En caso de que la modalidad de contratación haya sido por 3 (tres), 6 (seis) o 12 (doce) meses, la baja del servicio se producirá una vez vencido el plazo del contrato, salvo que se opte por la renovación del mismo. Si se optare igualmente por la baja anticipada del servicio, en ningún caso se procederá a la devolución de dinero alguno.</p>
+
+		<p class="font-weight-bold">14. VALIDEZ</p>
+
+		<p>La declaración de nulidad, invalidez o ineficacia de cualquiera de estas condiciones, no afectará a la validez o eficacia de las restantes, que seguirán siendo vinculantes para las partes. A los efectos de estos Términos y Condiciones todas las referencias a días se entenderán hechas a días corridos. Si el cumplimiento de una obligación recayera en un día inhábil, se entenderá como nueva fecha de cumplimiento el día hábil inmediatamente siguiente.</p>
+
+		<p class="font-weight-bold">15. TARIFAS Y PLANES DE FINANCIACION</p>
+
+		<p>En el caso de productos y servicios por suscripción, o en la modalidad de pago por documento, ALBREMATICA cobrará al Cliente por la prestación de cada uno de sus servicios las tarifas indicadas en el formulario de suscripción o en su página en Internet.</p>
+
+		<p>ALBREMATICA podrá modificar, en cualquier momento, las tarifas aplicables a sus productos y servicios. Una vez contratado el Servicio, toda modificación en relación a las modalidades de pago y precio del Servicio serán notificadas por correo electrónico, a la casilla del Cliente que figure en los registros de ALBREMATICA.</p>
+
+		<p>En el caso de retraso o impago de cualquier cantidad ALBREMATICA podrá: (1) Exigir el pago anticipado de cualquier cantidad pendiente; y/o (2) Suspender el acceso al Servicio hasta que se efectúe el pago; y/o (3) Cancelar el servicio; (4) Encargar a un servicio de recobro para conseguir el pago correspondiente y ceder las informaciones necesarias para tal fin.</p>
+
+		<p>Consulte al 011-4371-2806 por los planes de financiación vigentes.</p>
+
+		<p class="font-weight-bold">16. DEBITO AUTOMATICO DE LA TARJETA DE CREDITO</p>
+
+		<p>Para el caso de que el Cliente adhiera a la modalidad de pago por débito automático de su tarjeta de crédito, autoriza expresamente a ALBREMATICA a debitar en su cuenta los importes correspondientes, como así también, si es necesario, a entregarle a ALBREMATICA el original de una autorización firmada por el Cliente. La presente continuará vigente hasta tanto medie comunicación fehaciente de parte del Cliente para revocarla. El Cliente reconoce expresamente que, tanto la consulta de las bases de ALBREMATICA, como los importes que autoriza a debitar de su resumen, tiene como causa exclusiva la relación comercial existente entre ALBREMATICA y el Cliente. Será de conocimiento del Cliente que el abono mensual se facturará por mes calendario adelantado, como asimismo debe ser cancelado de la misma manera.</p>
+
+		<p class="font-weight-bold">17. PUBLICIDAD</p>
+
+		<p>ALBREMATICA y/o ELDIAL.COM no será responsable de ninguna información publicada en su página web y/o banners y/o flyers y/o mailings por parte de cualquier anunciante o sponsor. Los anunciantes son los únicos responsables del cumplimiento de la legislación vigente.</p>
+
+		<p class="font-weight-bold">18. CAPACITACION: CURSOS, DESAYUNOS DE TRABAJO Y SEMINARIOS</p>
+
+		<p>Para los eventos de capacitación que organice exclusivamente ALBREMATICA, sólo se aceptarán cancelaciones solicitadas vía mail a jornadas@albrematica.com.ar hasta 72 hs hábiles anteriores al día del evento. Toda cancelación posterior no tendrá efecto administrativo alguno y el importe no se reintegrará ni podrá ser imputado a otro evento. La vacante es personal e intransferible.</p>
+
+		<p>Para los eventos de capacitación que no organice exclusivamente ALBREMATICA, deberá estarse a lo establecido por el organizador en todo lo relacionado al evento, ya sea en cuanto al precio, su cobro, organización y cancelaciones, entre otros, no siendo responsable ALBREMATICA por ninguna causa relacionada al evento. Cualquier reclamo en relación al mismo deberá ser cursado al organizador.</p>
+
+		<p class="font-weight-bold">19. VENTA DE LIBROS: ENVIO Y RETIRO EN LAS OFICINAS DE ALBREMATICA</p>
+
+		<p>Cuando el cliente opte por el envío del libro adquirido, deberá abonar un cargo adicional que será comunicado previamente. La empresa prestadora del servicio de envíos es un tercero, ajeno a ALBREMATICA, por lo tanto, deberá estarse a los términos y condiciones del servicio por aquélla establecidos.</p>
+
+		<p>Para el caso de no encontrar al cliente o autorizado en el domicilio denunciado, luego de las visitas que realice el prestador de envíos, según sus términos y condiciones del servicio, el libro será devuelto a las oficinas de ALBREMATICA, debiendo el cliente retirarlo en Tucumán 1440, CABA, en el horario de 10 a 17 hs., de lunes a viernes, días hábiles, previa concertación telefónica al 011-4371-2806 o enviando un mail a la casilla: info@albrematica.com.ar. En caso de requerir que sea enviado nuevamente a su domicilio, deberá abonar un nuevo cargo adicional por el servicio de envío.</p>
+
+		<p>Cuando el cliente opte por el retiro del libro adquirido por las oficinas de ALBREMATICA deberá hacerlo en Tucumán 1440, CABA, en el horario de 10 a 17 hs., de lunes a viernes, días hábiles, previa concertación del día de retiro, ya sea llamando por teléfono al 011-4371-2806 o enviando un mail a la casilla: info@albrematica.com.ar.</p>
+
+		<p>En todos los casos ALBREMATICA reservará en sus oficinas el libro adquirido por un plazo máximo de 2 (dos) meses, ya sea desde la fecha de adquisición o desde la fecha de recepción del libro por no encontrar al cliente en su domicilio. Transcurrido dicho plazo, ALBREMATICA podrá disponer del mismo para su venta a un tercero, no garantizando al cliente la disponibilidad de stock. Para el caso de que el precio del libro se modifique, transcurridos dichos 2 (dos) meses, el cliente deberá abonar la diferencia entre lo abonado oportunamente y el precio vigente al momento del retiro.</p>
+
+		<p class="font-weight-bold">20. INDEMNIZACIÓN</p>
+
+		<p>El Cliente indemnizará a ALBREMATICA y las terceras partes proveedoras de contenidos, de cualquier reclamación, daño o pago que resulte de la violación de estos Términos y Condiciones.</p>
+
+		<p class="font-weight-bold">21. CESIÓN</p>
+
+		<p>El Cliente no podrá ceder o subcontratar sus obligaciones. En caso de se produjese una cesión del Cliente a un tercero cualquiera, incluso a empresas de un mismo grupo empresarial, ALBREMATICA podrá cancelar el Servicio sin derecho del cliente a efectuar reclamo alguno.</p>
+
+		<p class="font-weight-bold">22. DERECHOS DE PROPIEDAD INTELECTUAL E INDUSTRIAL</p>
+
+		<p>Todas las marcas, copyrights, gráficos o logos de ALBREMATICA y/o ELDIAL.COM disponibles en ELDIAL.COM y/o cualquier otro sitio web, son propiedad de ALBREMATICA S.A. y están protegidas por la legislación internacional y la legislación de la República Argentina y otros países, y no pueden ser copiadas, transmitidas, reproducidas o fotocopiadas por ningún medio, en todo o en parte, sin la previa autorización, expresa y escrita por parte de ALBREMATICA.</p>
+
+		<p class="font-weight-bold">23. PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES</p>
+
+		<p>El Cliente y/o Usuario y/o simple visitante de ELDIAL.COM manifiesta conocer y acepta lo indicado en www.eldial.com, secciones "Política de Privacidad" y "Datos personales", secciones que son parte integrante de estos Términos y Condiciones.</p>
+
+		<p>El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326. La DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONALES, Órgano de Control de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales.</p>
+
+		<p class="font-weight-bold">24. LEY APLICABLE Y JURISDICCION</p>
+
+		<p>Estos Términos y Condiciones Generales se rigen por las Leyes de la República Argentina. Las partes se someten expresamente para cualquier controversia la jurisdicción de un Arbitraje ante el Tribunal Arbitral especializado en temas de Tecnología del Colegio de Abogados de la Ciudad de Buenos Aires, con renuncia expresa a cualquier otra legislación y/o jurisdicción.</p>
+
+		<p>Albrematica S.A., Tucumán 1440, C.A.B.A., República Argentina. Tel/Fax: 54-11-4371-2806 (rotativas), e-mail: info@albrematica.com.ar. CUIT 30-61526767-4.</p>
+	</div>
+
+	<!-- Newsletter + Redes -->
+	<div id="newsleter-redes" class="container">
+	<div class="row">
+			<!-- Redes -->
+			<div class="col-md-5">
+				<p class="small text-muted">FACEBOOK</p>
+				<h3 class="mb-5">Síguenos en Facebook</h3>
+			</div>
+			<!-- Newsletter -->
+			<div class="col-md-7">
+				<p class="small text-muted">NEWSLETTER</p>
+				<h3 class="mb-5">Recibí todas las ofertas</h3>
+				<p class="mb-2">¿Quieres recibir nuestras ofertas? ¡Regístrate ya mismo y comienza a disfrutarlas!</p>
+				<form class="w-75">
+					<input class="form-control form-control-sm mb-2" type="text" name="nombre" placeholder="Nombre">
+					<input class="form-control form-control-sm mb-2" type="text" name="email" placeholder="Email">
+					<button class="btn btn-rojo rounded-0" type="submit">Suscribirse</button>
+				</form>
+			</div>
+	</div>	
+	</div>
+
+	</main>
+
+	<footer>
+		
+		<div class="container-fluid">
+			<!-- Pagos -->
+			<div id="tarjetas" class="row">
+				<img height="30px" src="img/visa.png">
+				<img height="30px" src="img/mastercard.png">
+				<img height="30px" src="img/amex.png">
+				<img height="30px" src="img/argencard.png">
+				<img height="30px" src="img/banelco.png">
+				<img height="30px" src="img/cabal.png">
+				<img height="30px" src="img/cencosud.png">
+				<img height="30px" src="img/diners.png">
+				<img height="30px" src="img/mercadopago.png">
+				<img height="30px" src="img/nativa.png">
+				<img height="30px" src="img/pagofacil.png">
+				<img height="30px" src="img/rapipago.png">
+				<img height="30px" src="img/tarjeta-naranja.png">
+				<img height="30px" src="img/tarjeta-shopping.png">
+				<img height="30px" src="img/todopago.png">
+			</div>
+			<!-- Info Legal -->
+			<div id="legales" class="bg-dark p-5">
+				<ul class="nav">
+					<li class="nav-item"><a class="text-light nav-link" href="#">Quienes Somos</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Cómo anunciar</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Preguntas Frecuentes (FAQ)</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Políticas de privacidad</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Defensa del Consumidor</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Términos y Condicioes</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Datos Personales</a></li>
+				</ul>
+				<p class="text-light pt-5">Copyright Tienda elDial.com - 2019. Todos los derechos reservados.</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- JQUERY.JS / POPPER.JS / BOOTSTRAP.JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Librerias JS -->
+  <script type="text/javascript" src="js/librerias/anime.min.js"></script>
+	<!-- JS LOCAL -->
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/categorias.js"></script>
+
+</body>
+</html>

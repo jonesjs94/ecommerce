@@ -1,0 +1,53 @@
+/*-------------- Newsletter + Redes --------------*/
+#newsleter-redes { 
+	padding-bottom: 2rem;
+	padding-top: 2rem; 
+}
+
+#tarjetas img { margin-left: 1rem; }
+
+
+/*-------------- Footer --------------*/
+footer .container-fluid {
+	padding: 1rem 0 0 0;
+}
+
+#tarjetas {
+	width: 80%;
+	flex-wrap: wrap;
+	padding: 2rem 1rem;
+}
+
+
+/* --------------------------------------------------- Media Querys --------------------------------------------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	#newsleter-redes h3 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	#newsleter-redes p {
+		margin-bottom: 0;
+		text-align: center;
+	}	
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	#newsleter-redes form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}	
+}
+
+

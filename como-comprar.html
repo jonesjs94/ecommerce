@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tienda elDial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<!-- BOOTSTRAP.CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/52fc4e6af1.js" crossorigin="anonymous"></script>
+  <!-- LOCAL CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/clases.css">
+</head>
+<body>
+
+	<div id="contenedor-vacio"></div>
+
+	<header>
+		<!-- Navegador -->
+		<nav id="navegador">
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<!-- Categorías del Menú -->
+			<div id="categorias">
+				<div role="button" id="icono-categorias">
+					<i class="fas fa-align-left mr-1"></i> Categorias
+				</div>
+				<div id="contenedor-categorias">
+				</div>
+			</div>
+			<!-- Formulario de búsqueda -->
+			<form id="form-busqueda-navegador" method="GET" action="">
+					<input class="form-control" type="text" name="busqueda" placeholder="Libros, ebooks, cursos ...">
+					<button class="btn btn-rojo" type="submit"><i class="fas fa-search"></i></button>
+			</form>
+			<!-- Menú secundario -->
+			<ul class="nav navbar">
+				<li class="nav-item btn-group">
+					<a class="nav-link  dropdown-toggle" href="#" id="ayuda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+					<div class="dropdown-menu" aria-labelledby="ayuda">
+						<a class="dropdown-item" href="#">Como comprar</a>
+						<a class="dropdown-item" href="#">Preguntas frecuentes</a>
+						<a class="dropdown-item" href="#">Contáctenos</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="micuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+					<div class="dropdown-menu" aria-labelledby="micuenta">
+						<span id="btn-iniciar-sesion" class="dropdown-item" onclick="desplegarInicioSesion()">Iniciar Sesión</span>
+						<span class="dropdown-item" href="#">Crear Cuenta</span>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Navegador celular -->
+		<nav id="navegador-celular">
+			<div class="d-flex">
+				<span id="btn-categorias-cel" class="btn btn-light btn-celular" role="button"><i class="fas fa-bars"></i></span>
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-search"></i></span>				
+			</div>
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<div class="d-flex">
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-shopping-cart"></i></span>			
+				<span class="btn btn-light btn-celular" role="button" onclick="desplegarInicioSesion()">
+					<i class="fas fa-user-tie"></i>
+					<i class="fas fa-arrow-right"></i>
+				</span>
+			</div>
+		</nav>
+		<!-- Contenedor categorías de celular -->
+		<nav id="contenedor-cat-cel" style="transform: translateX(-100%);"></nav>
+
+		<!-- Iniciar sesión -->
+		<div id="iniciar-sesion" class="d-none">
+			<form style="transform: translateX(100%);">
+	      <h1 class="h3 pb-4 text-center">Iniciar sesión</h1>
+	      <div class="form-group row">
+	        <label class="col-12" for="correo">Correo Electrónico:</label>
+	        <div class="col-12">
+	          <input id="correo" class="form-control form-control-sm" type="email" name="correo" required>
+	        </div>
+	      </div>
+	      <div class="form-group row">
+	        <label class="col-12" for="tel">Contraseña:</label>
+	        <div class="col-12">
+	          <input id="pass" class="form-control form-control-sm" type="password" name="pass" required>
+	        </div>
+	      </div>
+	      <div class="form-group row d-flex justify-content-center">
+	        <a class="small texto-eldial" href="#">¿Olvidaste la contraseña?</a>
+	      </div>
+	      <button type="submit" class="btn btn-rojo btn-block btn-sm">Entrar</button>
+	      <div class="form-group row d-flex justify-content-center mt-2">
+	        <span class="small mr-1">¿No tenés cuenta? </span><a class="small texto-eldial" href="#"> Registrate</a>
+	      </div>	      
+    	</form>
+		</div>
+
+	</header>
+
+	<main>
+
+		<div class="container py-5 small">
+			<h1 class="h3 texto-eldial">Cómo Comprar</h1>
+			<hr>
+
+			<ol>
+				<li>Elige el producto que deseas comprar.</li>
+				<li>Haz clic en el botón de "Agregar al carrito". Esto agregará el producto a tu carrito y te llevará al mismo.</li>
+				<li>Puedes seguir agregando otros productos al carrito o sino haz clic en "Iniciar Compra".</li>
+
+				<div class="py-3">
+					<p class="mb-0 texto-eldial font-weight-bold">IMPORTANTE</p>
+					<p class="mb-0">PRODUCTOS DIGITALES - <b>CURSOS PRESENCIALES Y ONLINE, EBOOKS y PAPERS</b></p>
+					<p class="mb-0">Si estás comprando un Curso, un ebook o paper, seleccioná la opción:</p>
+					<p class="mb-0">> Retirar por un local</p>
+
+					<img class="img-fluid" src="img/como-comprar.jpg">
+				</div>
+
+				<li>Completa tus datos de contacto y haz clic en "Continuar".</li>
+				<br>
+				<b>SI ESTÁS COMPRANDO UN LIBRO EN PAPEL</b>
+
+				<li>Ingresa la dirección a donde deseas recibir el producto. Luego haz clic en "Continuar".</li>
+				<li>Selecciona el método de envío que desees y haz clic en "Continuar".</li>
+				<br>
+				<li>
+					Elige el medio de pago.
+					<ul>
+						<li>También puedes seleccionar la opción de "Transferencia bancaria".</li>
+						<li>Una vez que hayas elegido el medio de pago, haz clic en "Continuar".</li>
+					</ul>
+				</li>
+				<br>
+				<li>inalmente en la página de Confirmación de compra puedes revisar toda la información de la compra. Luego haz clic en "Continuar".</li>
+				<br>
+				<li>Ahí serás redirigido a otra pantalla para que completes los datos sobre la forma de pago elegida. Después de confirmar la compra recibirás un correo de nuestra parte, ese no será un comprobante de pago.</li>
+				<br>
+				<li>
+					<p class="texto-eldial font-weight-bold mb-0">SI ESTÁS COMPRANDO un LIBRO EN PAPEL</p>
+					<p>Una vez acreditado el pago, haremos el envío correspondiente de los productos que hayas comprado a tu domicilio, si elegiste esa opción, o te avisamos por mail cuando podrás pasar a retirarlo en nuestro local en Tucumán 1440, CABA de 9hs. a 18hs.</p>
+					<p class="texto-eldial font-weight-bold mb-0">SI ESTÁS COMPRANDO un CURSO ONLINE</p>
+					<p><b>te enviamos al día siguiente hábil por correo electrónico los datos de ingreso y el link para poder ingresar a la plataforma del curso online.</b></p>
+					<p class="texto-eldial font-weight-bold mb-0">SI ESTÁS COMPRANDO un EBOOK o PAPER</p>
+					<p><b>te enviamos al día siguiente hábil por correo electrónico las instrucciones de descarga del ebook o paper.</b></p>
+				</li>
+			</ol>
+
+			<p class="h6 mt-5">Para mayor información o consultas, no dudes en contactarte de lunes a viernes de 9 hs. a 18 hs. al <b>43712806</b> o escribirnos a <b>ventas@albrematica.com.ar</b></p>
+
+			<hr>
+		</div>
+
+	<!-- Newsletter + Redes -->
+	<div id="newsleter-redes" class="container">
+	<div class="row">
+			<!-- Redes -->
+			<div class="col-md-5">
+				<p class="small text-muted">FACEBOOK</p>
+				<h3 class="mb-5">Síguenos en Facebook</h3>
+			</div>
+			<!-- Newsletter -->
+			<div class="col-md-7">
+				<p class="small text-muted">NEWSLETTER</p>
+				<h3 class="mb-5">Recibí todas las ofertas</h3>
+				<p class="mb-2">¿Quieres recibir nuestras ofertas? ¡Regístrate ya mismo y comienza a disfrutarlas!</p>
+				<form class="w-75">
+					<input class="form-control form-control-sm mb-2" type="text" name="nombre" placeholder="Nombre">
+					<input class="form-control form-control-sm mb-2" type="text" name="email" placeholder="Email">
+					<button class="btn btn-rojo" type="submit">Suscribirse</button>
+				</form>
+			</div>
+	</div>	
+	</div>
+
+	</main>
+
+	<footer>
+		
+		<div class="container-fluid">
+			<!-- Pagos -->
+			<div id="tarjetas" class="row">
+				<img height="30px" src="img/visa.png">
+				<img height="30px" src="img/mastercard.png">
+				<img height="30px" src="img/amex.png">
+				<img height="30px" src="img/argencard.png">
+				<img height="30px" src="img/banelco.png">
+				<img height="30px" src="img/cabal.png">
+				<img height="30px" src="img/cencosud.png">
+				<img height="30px" src="img/diners.png">
+				<img height="30px" src="img/mercadopago.png">
+				<img height="30px" src="img/nativa.png">
+				<img height="30px" src="img/pagofacil.png">
+				<img height="30px" src="img/rapipago.png">
+				<img height="30px" src="img/tarjeta-naranja.png">
+				<img height="30px" src="img/tarjeta-shopping.png">
+				<img height="30px" src="img/todopago.png">
+			</div>
+			<!-- Info Legal -->
+			<div id="legales" class="bg-dark p-5">
+				<ul class="nav">
+					<li class="nav-item"><a class="text-light nav-link" href="#">Quienes Somos</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Cómo anunciar</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Preguntas Frecuentes (FAQ)</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Políticas de privacidad</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Defensa del Consumidor</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Términos y Condicioes</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Datos Personales</a></li>
+				</ul>
+				<p class="text-light pt-5">Copyright Tienda elDial.com - 2019. Todos los derechos reservados.</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- JQUERY.JS / POPPER.JS / BOOTSTRAP.JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Librerias JS -->
+  <script type="text/javascript" src="js/librerias/anime.min.js"></script>
+	<!-- JS LOCAL -->
+	<script type="text/javascript" src="js/header.js"></script>
+
+</body>
+</html>

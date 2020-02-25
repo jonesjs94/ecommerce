@@ -1,0 +1,107 @@
+.card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* ---------- Categoría desplegada ---------- */
+#categoria-desplegada-producto {
+	font-size: 90%;
+}
+
+#categoria-desplegada-producto .nav-item a:hover {
+	color: #9f131d !important;
+}
+
+/* ---------- Producto ---------- */
+#titulo-producto {
+	font-size: 1.5rem;
+}
+
+#precio-producto {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+/* ---------- Descripción del producto ---------- */
+#descripcion h2 {
+	font-size: 1.5rem;
+	padding: 2rem 0;
+}
+
+#descripcion .row div {
+	font-size: 90%;
+	box-sizing: border-box;
+	padding: 0 .3rem;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+#descripcion .row .col-sm-2, 
+#descripcion h2,
+#sinopsis h2 {
+	color: #9c141c;
+}
+
+#descripcion .row .col-sm-2 {
+	border-bottom: 0;
+}
+
+#descripcion .row .col-sm-10 {
+	color: #666;
+}
+
+#sinopsis {
+	padding: 1rem 0;
+}
+
+#sinopsis h2 {
+	font-size: 1.3rem;
+	margin-bottom: 0;
+	padding-bottom: 1rem;
+}
+
+#sinopsis p {
+	font-size: 90%;
+}
+
+.separador {
+	margin: 0 .5rem;
+	font-weight: 500;
+}
+
+#productos-relacionados h2 {
+	font-size: 1.5rem;
+}
+
+/* --------------------------------------------------- Media Querys --------------------------------------------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+	#titulo-producto {
+		font-size: 1.2rem;
+	}
+
+	#precio-producto {
+		font-size: 1.5rem;
+	}		
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	#descripcion h2 {
+		text-align: center;
+	}
+
+	#descripcion .row .col-sm-10,
+	#productos-relacionados h2 {
+		text-align: center;
+	}
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+}

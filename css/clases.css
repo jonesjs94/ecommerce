@@ -1,0 +1,35 @@
+/* texto */
+
+.bold {
+	font-weight: 600 !important;
+}
+
+.small-90 {
+	font-size: 90%;
+}
+
+.texto-eldial {
+	color: #9c141c;
+}
+
+a.texto-eldial:hover {
+	color: #9c141c;
+	text-decoration: underline;
+}
+
+
+/*------- Botones -------*/
+
+.btn-rojo {
+	color: #fff;
+	background: #9f131d;
+}
+
+.btn-rojo:hover {
+	color: #fff;
+	background: #8C000A;
+}
+
+.btn-azul {
+
+}

@@ -1,0 +1,237 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+main {
+	margin-top: 72px;
+}
+
+#contenedor-vacio {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	opacity: 0;
+	z-index: -1;
+}
+
+/*-------------- Contenedor Confianza --------------*/
+#contenedor-confianza .row {
+	padding: 2rem 0;
+}
+
+#contenedor-confianza .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fa-truck, .fa-credit-card, .fa-lock { 
+	padding: .5rem;
+	font-size: 2rem; 
+}
+
+#contenedor-confianza h2 {
+	border-top: 1px solid #9C141C;
+	padding: 1.5rem 2rem 2.5rem 2rem;
+	text-align: center;
+	color: #9C141C;
+}
+
+
+/*-------------- Productos destacados --------------*/
+#libros-destacados h2 { margin: 1rem; }
+#cursos-destacados h2 { margin: 1rem; }
+
+
+/* ---------- Categoría desplegada ---------- */
+#categoria-desplegada .activo {
+	font-weight: 500;
+	color: #9f131d;
+	cursor: initial;
+	text-decoration: none;
+}
+
+#categoria-desplegada a:not(.activo) {
+	color: #737373;
+	font-weight: 500;
+}
+#categoria-desplegada a:not(.activo):hover {
+	color: #9f131d;
+	text-decoration: underline;
+}
+
+
+/* ---------- Productos ---------- */
+.link-producto { color: initial; }
+.link-producto:hover { text-decoration: none !important; }
+
+.producto { 
+	min-height: 400px;
+	margin-bottom: 2rem;
+	transition: .3s all ease; 
+}
+.producto:hover {
+	transition: .3s all ease;
+	box-shadow: 0px 5px 6px #6b6b6b;
+	transform: translateY(-5px);
+}
+
+.texto-producto { color: #a11721; }
+
+
+/* ---------- Formularios ---------- */
+
+.form-control {
+	border-radius: 0;
+	padding: 0 .5rem;
+	border: 1px solid #a0a0a0;
+	transition: all .3s ease;	
+}
+
+.form-control:focus {
+	transition: all .3s ease;
+	outline: none;
+	box-shadow: none;
+	border: 1px solid #9f131d;
+}
+
+
+/* ---------- Carrito de compras ---------- */
+
+.menu-carrito {
+	font-size: 110%;
+  font-weight: 500;	
+  padding: 0 1rem;
+}
+
+.menu-carrito p {
+	margin-bottom: 0;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  padding: 0 5px !important;
+  top: 0;
+}
+
+.nombre-producto {
+	font-size: 80%;
+	font-weight: 700;
+}
+
+.precio-producto {
+	font-size: 90%;
+	font-weight: 600;
+	text-align: center;
+}
+
+.subtotal-producto {
+	display: flex;
+	justify-content: space-between;
+	font-size: 90%;
+	font-weight: 600;
+}
+
+.cantidad-produto {
+	display: inline-block;
+	border: 1px solid #cacaca;
+}
+
+.divisor-productos {
+	margin: .5rem 0;
+}
+
+.fa-plus,
+.fa-minus {
+	font-size: 80%;
+}
+
+.botones-calculo {
+	padding: 0 .5rem;
+}
+
+.botones-calculo:hover > .fa-plus,
+.botones-calculo:hover > .fa-minus {
+	color: #fff !important;
+}
+
+.fa-trash {
+	margin-right: 10px;
+	opacity: .5;
+}
+
+.fa-trash:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+/* --------------------------------------------------- Media Querys --------------------------------------------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	#libros-destacados h2,
+	#cursos-destacados h2 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	/*-------- Carrito de compras --------*/
+	.menu-carrito {
+		font-size: 90%;
+	  font-weight: 500;	
+	  padding: 0 1rem;
+	}
+
+	.divisor-menu {
+	  margin: .5rem 0;
+	}
+
+	.nombre-producto {
+	  font-size: 70%;
+    font-weight: 500;	
+	}
+
+	.subtotal-producto {
+		display: initial;
+		justify-content: initial;
+	}
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+	main {
+		margin-top: 66px;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	#slider {
+		display: none;
+	}
+
+	#contenedor-confianza {
+		font-size: 80%;
+	}
+
+	#contenedor-confianza h2 {
+		padding: 1rem 1.5rem 2rem 1.5rem; 
+		font-size: 1.3rem;
+	}
+
+	.card { margin-bottom: 1rem; }	
+}

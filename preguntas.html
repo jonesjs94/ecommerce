@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tienda elDial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<!-- BOOTSTRAP.CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/52fc4e6af1.js" crossorigin="anonymous"></script>
+  <!-- LOCAL CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/clases.css">
+</head>
+<body>
+
+	<div id="contenedor-vacio"></div>
+
+	<header>
+		<!-- Navegador -->
+		<nav id="navegador">
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<!-- Categorías del Menú -->
+			<div id="categorias">
+				<div role="button" id="icono-categorias">
+					<i class="fas fa-align-left mr-1"></i> Categorias
+				</div>
+				<div id="contenedor-categorias">
+				</div>
+			</div>
+			<!-- Formulario de búsqueda -->
+			<form id="form-busqueda-navegador" method="GET" action="">
+					<input class="form-control" type="text" name="busqueda" placeholder="Libros, ebooks, cursos ...">
+					<button class="btn btn-rojo" type="submit"><i class="fas fa-search"></i></button>
+			</form>
+			<!-- Menú secundario -->
+			<ul class="nav navbar">
+				<li class="nav-item btn-group">
+					<a class="nav-link  dropdown-toggle" href="#" id="ayuda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+					<div class="dropdown-menu" aria-labelledby="ayuda">
+						<a class="dropdown-item" href="#">Como comprar</a>
+						<a class="dropdown-item" href="#">Preguntas frecuentes</a>
+						<a class="dropdown-item" href="#">Contáctenos</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="micuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+					<div class="dropdown-menu" aria-labelledby="micuenta">
+						<span id="btn-iniciar-sesion" class="dropdown-item" onclick="desplegarInicioSesion()">Iniciar Sesión</span>
+						<span class="dropdown-item" href="#">Crear Cuenta</span>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Navegador celular -->
+		<nav id="navegador-celular">
+			<div class="d-flex">
+				<span id="btn-categorias-cel" class="btn btn-light btn-celular" role="button"><i class="fas fa-bars"></i></span>
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-search"></i></span>				
+			</div>
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<div class="d-flex">
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-shopping-cart"></i></span>			
+				<span class="btn btn-light btn-celular" role="button" onclick="desplegarInicioSesion()">
+					<i class="fas fa-user-tie"></i>
+					<i class="fas fa-arrow-right"></i>
+				</span>
+			</div>
+		</nav>
+		<!-- Contenedor categorías de celular -->
+		<nav id="contenedor-cat-cel" style="transform: translateX(-100%);"></nav>
+
+		<!-- Iniciar sesión -->
+		<div id="iniciar-sesion" class="d-none">
+			<form style="transform: translateX(100%);">
+	      <h1 class="h3 pb-4 text-center">Iniciar sesión</h1>
+	      <div class="form-group row">
+	        <label class="col-12" for="correo">Correo Electrónico:</label>
+	        <div class="col-12">
+	          <input id="correo" class="form-control form-control-sm" type="email" name="correo" required>
+	        </div>
+	      </div>
+	      <div class="form-group row">
+	        <label class="col-12" for="tel">Contraseña:</label>
+	        <div class="col-12">
+	          <input id="pass" class="form-control form-control-sm" type="password" name="pass" required>
+	        </div>
+	      </div>
+	      <div class="form-group row d-flex justify-content-center">
+	        <a class="small texto-eldial" href="#">¿Olvidaste la contraseña?</a>
+	      </div>
+	      <button type="submit" class="btn btn-rojo btn-block btn-sm">Entrar</button>
+	      <div class="form-group row d-flex justify-content-center mt-2">
+	        <span class="small mr-1">¿No tenés cuenta? </span><a class="small texto-eldial" href="#"> Registrate</a>
+	      </div>	      
+    	</form>
+		</div>
+
+	</header>
+
+	<main>
+
+	<div class="container small-90 py-5">
+		<h1 class="h2 texto-eldial">Preguntas Frecuentes</h1>
+		<hr>
+
+		<p class="font-weight-bold">¿Qué productos puedo comprar en la tienda?</p>
+
+		<p>En nuestra tienda podés comprar suscripciones, libros en papel, ebooks, cursos presenciales, videoclases a distancia, cursos online, papers y combos promocionales.</p>
+
+		<p class="font-weight-bold">¿Cómo comprar?</p>
+
+		<p>Es muy fácil. Sólo tenés que registrarte como usuario nuevo (recordá que será distinto al que tengas como suscriptor abonado a elDial.com), seleccionar los productos que quieras, agregarlos al carrito de compras y elegir la opción pagar. Podrás escoger entre todos nuestros medios de pago disponibles y además, sumarle, en caso que necesites, el envío a tu domicilio.</p>
+
+		<p class="font-weight-bold">¿Cómo usar mi descuento de suscriptor de elDial.com (abonado mensual)?</p>
+
+		<p>Por ser suscriptor abonado de elDial.com, tenés más beneficios. Por ello, al finalizar la compra -en el campo correspondiente al “Código del cupón de descuento”- deberás poner tu código de descuento. En caso que no lo sepas, podés pedirlo a Info@albrematica.com.ar o llamarnos al 4371-2806 de lunes a viernes de 9 a 18hs., mencionando tu nombre, apellido y mail y enseguida te lo mandamos. Recordá que el código de descuento es personal e intransferible.</p>
+
+		<p class="font-weight-bold">¿Cómo comprar productos que no necesitan envío a domicilio, como los cursos presenciales, videoclases a distancia, cursos online, ebooks o papers?</p>
+
+		<p>De la misma forma que los demás productos, solo que al momento de escoger el envío, hay que seleccionar “retiro en local” y luego, seleccionar la opción “solo para productos digitales”.</p>
+
+		<p class="font-weight-bold">¿Puedo comprar libros en papel y productos digitales en la misma compra?</p>
+
+		<p>Claro que sí, la tienda te brinda mayor comodidad y facilidad para realizar varias compras simultaneas. Lo único que tenés que hacer es agregar al carrito de compras tantos productos como desees comprar. En caso que necesites envío del libro, indicás el domicilio para el envío y los productos digitales te llegarán a tu casilla de correo.</p>
+
+		<p class="font-weight-bold">¿Cómo me llegan los productos digitales (cursos presenciales, videoclases a distancia, cursos online, ebooks, papers)?</p>
+
+		<p>Se envían por mail. Al finalizar la compra y realizar el pago, te llegará a tu casilla de correo electrónico el instructivo para poder comenzar a utilizar los productos comprados.</p>
+
+		<p class="font-weight-bold">¿Cómo se confirma la vacante para mi curso presencial, videoclase a distancia o curso online?</p>
+
+		<p>La misma se confirma una vez realizado el pago, recordá que la vacante es personal e intransferible.</p>
+
+		<p class="font-weight-bold">¿Cómo obtengo el certificado del curso presencial, videoclase a distancia o curso online?</p>
+
+		<p>El certificado emitido por la efectiva participación de la capacitación será enviado por correo electrónico en formato digital (PDF) a tu casilla de dentro de los 5 días hábiles posteriores al evento.</p>
+
+		<p class="font-weight-bold">¿Cuál es el costo de envío?</p>
+
+		<p>El costo de envío será mostrado en base al total de la compra, su peso y la ubicación del domicilio de entrega, en el checkout, en el momento previo a la compra. En caso de optar por retirar el producto por el local o para productos digitales, no tendrá costo.</p>
+
+		<p class="font-weight-bold">¿Dónde puedo recibir mi pedido?</p>
+
+		<p>Realizamos envíos a todo el país. Solamente tenés que completar la dirección de entrega.</p>
+
+		<p class="font-weight-bold">¿Cuánto tarda en llegar el pedido?</p>
+
+		<p>El tiempo de entrega dependerá del tipo de envío seleccionado y la ubicación del domicilio de entrega. En general, la demora es de aproximadamente hasta 10 (diez) dias hábiles. Seguiremos trabajando para poder acortar ese plazo!</p>
+
+		<p class="font-weight-bold">¿Qué ocurre si no hay nadie en el domicilio de entrega y no se recibe el producto?</p>
+
+		<p>El correo concurre 2 (dos) veces al domicilio indicado a realizar la entrega. En caso de no ser posible la segunda entrega, el producto vuelve a nuestra oficina y en caso de optarse por un nuevo envío, el mismo tendrá un nuevo costo.</p>
+
+		<p class="font-weight-bold">Si nadie recibió mi pedido ¿ es posible que me lo vuelvan a enviar?</p>
+
+		<p>Si, lo volvemos a mandar solo tendrá que abonar un nuevo envío, por esa razón puede elegir alguna dirección que tenga seguridad que sea recibido.</p>
+
+		<p class="font-weight-bold">¿Puedo enviar a nombre de otra persona?</p>
+
+		<p>Puede elegir que el envío sea a nombre de un tercero siempre y cuando nos deje especificada esa opción en la compra.</p>
+
+		<p class="font-weight-bold">¿Cuál es el plazo para realizar cancelación o cambio de libro?</p>
+
+		<p>El plazo para cualquiera de esas opciones es 10 días corridos a partir de la fecha en que se recibe el producto, siempre previa comunicación vía mail a ventas@albrematica.com.ar, informando el numero de envío y número de orden. Lo importante en este caso es que no se abra el producto y se devuelva en las mismas condiciones que fue entregado; sin que haya sido usado; no tengan signos de deterioro; rotura; escritos o manchados; se mantengan en el mismo estado en que se recibieron conservando los envoltorios o cajas originales, plásticos, con sus etiquetas incluyendo todo tipo de accesorios, si los hubiere. Cuando el mismo sea devuelto se procederá al nuevo envío o restitución del dinero. La dirección para el envio de cambios y devoluciones es: Albrematica SA, Tucumán 1440, CABA (CP 1050). ¿Qué debo hacer si el producto no llega en buen estado? Ponte en contacto con nosotros en cualquiera de nuestros canales de atención para poder solucionarlo. ¿Cuál es el plazo para realizar cancelaciones o cambios de cursos? Sólo se aceptarán cancelaciones solicitadas vía mail a jornadas@albrematica.com.ar hasta 72hs hábiles anteriores al evento. Toda cancelación posterior no tendrá efecto administrativo alguno y el importe no se reintegrará ni podrá ser imputado a otro evento ¿Cuál es el plazo para realizar cancelaciones o cambios de ebooks? Los plazos para cancelar o cambiar el ebook elegido es antes de que este sea enviado vía mail, puede escribirnos sobre la cancelación o cambio a <a href="mailto:ventas@albrematica.com.ar">ventas@albrematica.com.ar</a> indicándonos el numero de orden.</p>
+
+		<hr>
+	</div>
+
+	<!-- Newsletter + Redes -->
+	<div id="newsleter-redes" class="container">
+	<div class="row">
+			<!-- Redes -->
+			<div class="col-md-5">
+				<p class="small text-muted">FACEBOOK</p>
+				<h3 class="mb-5">Síguenos en Facebook</h3>
+			</div>
+			<!-- Newsletter -->
+			<div class="col-md-7">
+				<p class="small text-muted">NEWSLETTER</p>
+				<h3 class="mb-5">Recibí todas las ofertas</h3>
+				<p class="mb-2">¿Quieres recibir nuestras ofertas? ¡Regístrate ya mismo y comienza a disfrutarlas!</p>
+				<form class="w-75">
+					<input class="form-control form-control-sm mb-2" type="text" name="nombre" placeholder="Nombre">
+					<input class="form-control form-control-sm mb-2" type="text" name="email" placeholder="Email">
+					<button class="btn btn-rojo rounded-0" type="submit">Suscribirse</button>
+				</form>
+			</div>
+	</div>	
+	</div>
+
+	</main>
+
+	<footer>
+		
+		<div class="container-fluid">
+			<!-- Pagos -->
+			<div id="tarjetas" class="row">
+				<img height="30px" src="img/visa.png">
+				<img height="30px" src="img/mastercard.png">
+				<img height="30px" src="img/amex.png">
+				<img height="30px" src="img/argencard.png">
+				<img height="30px" src="img/banelco.png">
+				<img height="30px" src="img/cabal.png">
+				<img height="30px" src="img/cencosud.png">
+				<img height="30px" src="img/diners.png">
+				<img height="30px" src="img/mercadopago.png">
+				<img height="30px" src="img/nativa.png">
+				<img height="30px" src="img/pagofacil.png">
+				<img height="30px" src="img/rapipago.png">
+				<img height="30px" src="img/tarjeta-naranja.png">
+				<img height="30px" src="img/tarjeta-shopping.png">
+				<img height="30px" src="img/todopago.png">
+			</div>
+			<!-- Info Legal -->
+			<div id="legales" class="bg-dark p-5">
+				<ul class="nav">
+					<li class="nav-item"><a class="text-light nav-link" href="#">Quienes Somos</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Cómo anunciar</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Preguntas Frecuentes (FAQ)</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Políticas de privacidad</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Defensa del Consumidor</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Términos y Condicioes</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Datos Personales</a></li>
+				</ul>
+				<p class="text-light pt-5">Copyright Tienda elDial.com - 2019. Todos los derechos reservados.</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- JQUERY.JS / POPPER.JS / BOOTSTRAP.JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Librerias JS -->
+  <script type="text/javascript" src="js/librerias/anime.min.js"></script>
+	<!-- JS LOCAL -->
+	<script type="text/javascript" src="js/header.js"></script>
+
+</body>
+</html>

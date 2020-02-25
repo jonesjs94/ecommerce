@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tienda elDial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<!-- BOOTSTRAP.CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/52fc4e6af1.js" crossorigin="anonymous"></script>
+  <!-- LOCAL CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/clases.css">
+
+  <!-- Estilo para esta plantilla -->
+  <style type="text/css">
+  	a {
+  		color: #000;
+  	}
+
+  	a:hover {
+  		text-decoration: none;
+  		color: #9f131d;
+  	}
+  </style>
+</head>
+<body>
+
+	<div id="contenedor-vacio"></div>
+
+	<header>
+		<!-- Navegador -->
+		<nav id="navegador">
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<!-- Categorías del Menú -->
+			<div id="categorias">
+				<div role="button" id="icono-categorias">
+					<i class="fas fa-align-left mr-1"></i> Categorias
+				</div>
+				<div id="contenedor-categorias">
+				</div>
+			</div>
+			<!-- Formulario de búsqueda -->
+			<form id="form-busqueda-navegador" method="GET" action="">
+					<input class="form-control" type="text" name="busqueda" placeholder="Libros, ebooks, cursos ...">
+					<button class="btn btn-rojo" type="submit"><i class="fas fa-search"></i></button>
+			</form>
+			<!-- Menú secundario -->
+			<ul class="nav navbar">
+				<li class="nav-item btn-group">
+					<a class="nav-link  dropdown-toggle" href="#" id="ayuda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+					<div class="dropdown-menu" aria-labelledby="ayuda">
+						<a class="dropdown-item" href="#">Como comprar</a>
+						<a class="dropdown-item" href="#">Preguntas frecuentes</a>
+						<a class="dropdown-item" href="#">Contáctenos</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="micuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+					<div class="dropdown-menu" aria-labelledby="micuenta">
+						<span id="btn-iniciar-sesion" class="dropdown-item" onclick="desplegarInicioSesion()">Iniciar Sesión</span>
+						<span class="dropdown-item" href="#">Crear Cuenta</span>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Navegador celular -->
+		<nav id="navegador-celular">
+			<div class="d-flex">
+				<span id="btn-categorias-cel" class="btn btn-light btn-celular" role="button"><i class="fas fa-bars"></i></span>
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-search"></i></span>				
+			</div>
+			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<div class="d-flex">
+				<span class="btn btn-light btn-celular" role="button"><i class="fas fa-shopping-cart"></i></span>			
+				<span class="btn btn-light btn-celular" role="button" onclick="desplegarInicioSesion()">
+					<i class="fas fa-user-tie"></i>
+					<i class="fas fa-arrow-right"></i>
+				</span>
+			</div>
+		</nav>
+		<!-- Contenedor categorías de celular -->
+		<nav id="contenedor-cat-cel" style="transform: translateX(-100%);"></nav>
+
+		<!-- Iniciar sesión -->
+		<div id="iniciar-sesion" class="d-none">
+			<form style="transform: translateX(100%);">
+	      <h1 class="h3 pb-4 text-center">Iniciar sesión</h1>
+	      <div class="form-group row">
+	        <label class="col-12" for="correo">Correo Electrónico:</label>
+	        <div class="col-12">
+	          <input id="correo" class="form-control form-control-sm" type="email" name="correo" required>
+	        </div>
+	      </div>
+	      <div class="form-group row">
+	        <label class="col-12" for="tel">Contraseña:</label>
+	        <div class="col-12">
+	          <input id="pass" class="form-control form-control-sm" type="password" name="pass" required>
+	        </div>
+	      </div>
+	      <div class="form-group row d-flex justify-content-center">
+	        <a class="small texto-eldial" href="#">¿Olvidaste la contraseña?</a>
+	      </div>
+	      <button type="submit" class="btn btn-rojo btn-block btn-sm">Entrar</button>
+	      <div class="form-group row d-flex justify-content-center mt-2">
+	        <span class="small mr-1">¿No tenés cuenta? </span><a class="small texto-eldial" href="#"> Registrate</a>
+	      </div>	      
+    	</form>
+		</div>
+
+	</header>
+
+	<main>
+
+		<div class="container py-5">
+			<h1 class="h3">Contacto</h1>
+			<hr>
+
+			<div class="row">
+				<div class="col-md-7">
+					<form>
+						<input class="form-control" type="text" name="nombre" placeholder="Nombre">
+						<br>
+						<input class="form-control" type="text" name="email" placeholder="E-mail">
+						<br>
+						<input class="form-control" type="text" name="tel" placeholder="Teléfono">
+						<br>
+						<textarea class="form-control" rows="5" placeholder="Mensaje"></textarea>
+					</form>
+				</div>
+				<div class="col-md-5 mt-3 mt-md-0">
+					<p><i class="fas fa-phone mr-2"></i>(5411) 4371 2806</p>
+					<p><a href="mailto:ventas@albrematica.com.ar"><i class="fas fa-envelope mr-2"></i>ventas@albrematica.com.ar</a></p>
+					<p><i class="fas fa-map-marker-alt mr-2"></i>Tucumán 1440 (1050) CABA</p>
+
+					<h3 class="h4 my-4">También podés encontrarnos en:</h3>
+
+					<p><a href="https://www.facebook.com/elDialcom"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></p>
+					<p><a href="https://twitter.com/elDial_com"><i class="fab fa-twitter mr-2"></i>Twitter</a></p>
+					<p><a href="https://www.instagram.com/eldialcom/"><i class="fab fa-instagram mr-2"></i>Instagram</a></p>
+				</div>
+			</div>
+		</div>
+
+	<!-- Newsletter + Redes -->
+	<div id="newsleter-redes" class="container">
+	<div class="row">
+			<!-- Redes -->
+			<div class="col-md-5">
+				<p class="small text-muted">FACEBOOK</p>
+				<h3 class="mb-5">Síguenos en Facebook</h3>
+			</div>
+			<!-- Newsletter -->
+			<div class="col-md-7">
+				<p class="small text-muted">NEWSLETTER</p>
+				<h3 class="mb-5">Recibí todas las ofertas</h3>
+				<p class="mb-2">¿Quieres recibir nuestras ofertas? ¡Regístrate ya mismo y comienza a disfrutarlas!</p>
+				<form class="w-75">
+					<input class="form-control form-control-sm mb-2" type="text" name="nombre" placeholder="Nombre">
+					<input class="form-control form-control-sm mb-2" type="text" name="email" placeholder="Email">
+					<button class="btn btn-rojo" type="submit">Suscribirse</button>
+				</form>
+			</div>
+	</div>	
+	</div>
+
+	</main>
+
+	<footer>
+		
+		<div class="container-fluid">
+			<!-- Pagos -->
+			<div id="tarjetas" class="row">
+				<img height="30px" src="img/visa.png">
+				<img height="30px" src="img/mastercard.png">
+				<img height="30px" src="img/amex.png">
+				<img height="30px" src="img/argencard.png">
+				<img height="30px" src="img/banelco.png">
+				<img height="30px" src="img/cabal.png">
+				<img height="30px" src="img/cencosud.png">
+				<img height="30px" src="img/diners.png">
+				<img height="30px" src="img/mercadopago.png">
+				<img height="30px" src="img/nativa.png">
+				<img height="30px" src="img/pagofacil.png">
+				<img height="30px" src="img/rapipago.png">
+				<img height="30px" src="img/tarjeta-naranja.png">
+				<img height="30px" src="img/tarjeta-shopping.png">
+				<img height="30px" src="img/todopago.png">
+			</div>
+			<!-- Info Legal -->
+			<div id="legales" class="bg-dark p-5">
+				<ul class="nav">
+					<li class="nav-item"><a class="text-light nav-link" href="#">Quienes Somos</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Cómo anunciar</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Preguntas Frecuentes (FAQ)</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Políticas de privacidad</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Defensa del Consumidor</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Términos y Condicioes</a></li>
+					<li class="nav-item"><a class="text-light nav-link" href="#">Datos Personales</a></li>
+				</ul>
+				<p class="text-light pt-5">Copyright Tienda elDial.com - 2019. Todos los derechos reservados.</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- JQUERY.JS / POPPER.JS / BOOTSTRAP.JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Librerias JS -->
+  <script type="text/javascript" src="js/librerias/anime.min.js"></script>
+	<!-- JS LOCAL -->
+	<script type="text/javascript" src="js/header.js"></script>
+
+</body>
+</html>

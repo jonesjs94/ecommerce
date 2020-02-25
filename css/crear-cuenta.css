@@ -1,0 +1,80 @@
+#registro {
+	width: 60%;
+  margin-left: 12%;
+	padding: 2rem;
+}
+
+#registro h1 {
+	font-size: 1.75rem;
+	font-weight: 500;
+}
+
+#registro label {
+	font-size: 90%;
+	font-weight: 500;
+	margin-bottom: 0;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+#registro input {
+	border-radius: 0;
+	padding: 0 .5rem;
+	border: 1px solid #a0a0a0;
+	transition: all .5s ease;	
+}
+
+#registro input:focus {
+	transition: all .5s ease;
+	outline: none;
+	box-shadow: none;
+	border: 1px solid #9f131d;
+}
+
+#registro button {
+	width: 40%;
+  margin-left: 35%;
+}
+
+
+/* ---------------------------------------------- Media Querys ---------------------------------------------- */
+
+ /*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	#registro {
+		padding: 1rem;
+	}
+
+	#registro h1 {
+		font-size: 1.2rem;
+	}
+}
+
+ /*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+	#registro {
+		width: initial;
+		margin-left: initial;
+	}
+
+	#registro label {
+		text-align: initial;
+	}
+
+	#registro button {
+		width: 100%;
+		margin-left: initial;
+	}
+}
+
+ /*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+}
+
+ /*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+
+}
