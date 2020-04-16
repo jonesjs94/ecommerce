@@ -13,6 +13,18 @@
   <link rel="stylesheet" type="text/css" href="css/header.css">
   <link rel="stylesheet" type="text/css" href="css/footer.css">
   <link rel="stylesheet" type="text/css" href="css/clases.css">
+
+  <!-- Estilo para esta plantilla -->
+  <style type="text/css">
+  	a {
+  		color: #000;
+  	}
+
+  	a:hover {
+  		text-decoration: none;
+  		color: #9f131d;
+  	}
+  </style>
 </head>
 <body>
 
@@ -21,7 +33,7 @@
 	<header>
 		<!-- Navegador -->
 		<nav id="navegador">
-			<a class="navbar-brand logo" href="#"><img src="img/eldial.png"></a> 
+			<a class="navbar-brand logo" href="/index.html"><img src="img/eldial.png"></a> 
 			<!-- Categorías del Menú -->
 			<div id="categorias">
 				<div role="button" id="icono-categorias">
@@ -40,16 +52,16 @@
 				<li class="nav-item btn-group">
 					<a class="nav-link  dropdown-toggle" href="#" id="ayuda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
 					<div class="dropdown-menu" aria-labelledby="ayuda">
-						<a class="dropdown-item" href="#">Como comprar</a>
-						<a class="dropdown-item" href="#">Preguntas frecuentes</a>
-						<a class="dropdown-item" href="#">Contáctenos</a>
+						<a class="dropdown-item" href="/como-comprar.html">Como comprar</a>
+						<a class="dropdown-item" href="/preguntas-frecuentes.html">Preguntas frecuentes</a>
+						<a class="dropdown-item" href="/contacto.html">Contáctenos</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="micuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
 					<div class="dropdown-menu" aria-labelledby="micuenta">
 						<span id="btn-iniciar-sesion" class="dropdown-item" onclick="desplegarInicioSesion()">Iniciar Sesión</span>
-						<span class="dropdown-item" href="#">Crear Cuenta</span>
+						<span class="dropdown-item"><a class="text-reset" href="/crear-cuenta.html">Crear Cuenta</a></span>
 					</div>
 				</li>
 			</ul>
@@ -103,56 +115,34 @@
 
 	<main>
 
-		<div class="container py-5 small">
-			<h1 class="h3 texto-eldial">Cómo Comprar</h1>
+		<div class="container py-5">
+			<h1 class="h3">Contacto</h1>
 			<hr>
 
-			<ol>
-				<li>Elige el producto que deseas comprar.</li>
-				<li>Haz clic en el botón de "Agregar al carrito". Esto agregará el producto a tu carrito y te llevará al mismo.</li>
-				<li>Puedes seguir agregando otros productos al carrito o sino haz clic en "Iniciar Compra".</li>
-
-				<div class="py-3">
-					<p class="mb-0 texto-eldial font-weight-bold">IMPORTANTE</p>
-					<p class="mb-0">PRODUCTOS DIGITALES - <b>CURSOS PRESENCIALES Y ONLINE, EBOOKS y PAPERS</b></p>
-					<p class="mb-0">Si estás comprando un Curso, un ebook o paper, seleccioná la opción:</p>
-					<p class="mb-0">> Retirar por un local</p>
-
-					<img class="img-fluid" src="img/como-comprar.jpg">
+			<div class="row">
+				<div class="col-md-7">
+					<form>
+						<input class="form-control" type="text" name="nombre" placeholder="Nombre">
+						<br>
+						<input class="form-control" type="text" name="email" placeholder="E-mail">
+						<br>
+						<input class="form-control" type="text" name="tel" placeholder="Teléfono">
+						<br>
+						<textarea class="form-control" rows="5" placeholder="Mensaje"></textarea>
+					</form>
 				</div>
+				<div class="col-md-5 mt-3 mt-md-0">
+					<p><i class="fas fa-phone mr-2"></i>(5411) 4371 2806</p>
+					<p><a href="mailto:ventas@albrematica.com.ar"><i class="fas fa-envelope mr-2"></i>ventas@albrematica.com.ar</a></p>
+					<p><i class="fas fa-map-marker-alt mr-2"></i>Tucumán 1440 (1050) CABA</p>
 
-				<li>Completa tus datos de contacto y haz clic en "Continuar".</li>
-				<br>
-				<b>SI ESTÁS COMPRANDO UN LIBRO EN PAPEL</b>
+					<h3 class="h4 my-4">También podés encontrarnos en:</h3>
 
-				<li>Ingresa la dirección a donde deseas recibir el producto. Luego haz clic en "Continuar".</li>
-				<li>Selecciona el método de envío que desees y haz clic en "Continuar".</li>
-				<br>
-				<li>
-					Elige el medio de pago.
-					<ul>
-						<li>También puedes seleccionar la opción de "Transferencia bancaria".</li>
-						<li>Una vez que hayas elegido el medio de pago, haz clic en "Continuar".</li>
-					</ul>
-				</li>
-				<br>
-				<li>inalmente en la página de Confirmación de compra puedes revisar toda la información de la compra. Luego haz clic en "Continuar".</li>
-				<br>
-				<li>Ahí serás redirigido a otra pantalla para que completes los datos sobre la forma de pago elegida. Después de confirmar la compra recibirás un correo de nuestra parte, ese no será un comprobante de pago.</li>
-				<br>
-				<li>
-					<p class="texto-eldial font-weight-bold mb-0">SI ESTÁS COMPRANDO un LIBRO EN PAPEL</p>
-					<p>Una vez acreditado el pago, haremos el envío correspondiente de los productos que hayas comprado a tu domicilio, si elegiste esa opción, o te avisamos por mail cuando podrás pasar a retirarlo en nuestro local en Tucumán 1440, CABA de 9hs. a 18hs.</p>
-					<p class="texto-eldial font-weight-bold mb-0">SI ESTÁS COMPRANDO un CURSO ONLINE</p>
-					<p><b>te enviamos al día siguiente hábil por correo electrónico los datos de ingreso y el link para poder ingresar a la plataforma del curso online.</b></p>
-					<p class="texto-eldial font-weight-bold mb-0">SI ESTÁS COMPRANDO un EBOOK o PAPER</p>
-					<p><b>te enviamos al día siguiente hábil por correo electrónico las instrucciones de descarga del ebook o paper.</b></p>
-				</li>
-			</ol>
-
-			<p class="h6 mt-5">Para mayor información o consultas, no dudes en contactarte de lunes a viernes de 9 hs. a 18 hs. al <b>43712806</b> o escribirnos a <b>ventas@albrematica.com.ar</b></p>
-
-			<hr>
+					<p><a href="https://www.facebook.com/elDialcom"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></p>
+					<p><a href="https://twitter.com/elDial_com"><i class="fab fa-twitter mr-2"></i>Twitter</a></p>
+					<p><a href="https://www.instagram.com/eldialcom/"><i class="fab fa-instagram mr-2"></i>Instagram</a></p>
+				</div>
+			</div>
 		</div>
 
 	<!-- Newsletter + Redes -->

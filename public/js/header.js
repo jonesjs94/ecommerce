@@ -219,133 +219,133 @@ function crearMenuCel(lista, elemento) {
 // Menú de las categorías
 let menu = [
   {
-    title: "Libros", id: "libros", nivel: 1, link: "/libros", submenu: [
+    title: "Libros", id: "libros", nivel: 1, link: "/productos.html", submenu: [
       {
-        title: "Papel", id: "papel", nivel: 2, link: "/papel", submenu: [
+        title: "Papel", id: "papel", nivel: 2, link: "/productos.html", submenu: [
           {
-            title: "Códigos", id: "l-codigos", nivel: 3, link: "/codigos"
+            title: "Códigos", id: "l-codigos", nivel: 3, link: "/productos.html"
           },
           {
-            title: "Civil y Comercial", id: "l-civil-y-comercial", nivel: 3, link: "/civil-y-comercial", submenu: [
-              { title: "Parte General", id: "l-parte-general", nivel: 4, link: "/parte-general" },
-              { title: "Contratos", id: "l-contratos", nivel: 4, link: "/contratos" },
-              { title: "Familia y Sucesiones", id: "l-familia-y-sucesiones", nivel: 4, link: "/familia-y-sucesiones" },
-              { title: "Consumidor", id: "l-consumidor", nivel: 4, link: "/consumidor" },
-              { title: "Obligaciones y Daños", id: "l-obligaciones-y-daños", nivel: 4, link: "/obligaciones-y-daños" },
-              { title: "Reales e Inmobiliario", id: "l-reales-e-inmobiliario", nivel: 4, link: "/reales-e-inmobiliario" },
-              { title: "Societario y Empresarial", id: "l-societario-y-empresarial", nivel: 4, link: "/societario-y-empresarial" },
-              { title: "Propiedad Intelectual", id: "l-propiedad-intelectual", nivel: 4, link: "/propiedad-intelectual" },
-              { title: "Del Seguro", id: "l-del-seguro", nivel: 4, link: "/del-seguro" },
-              { title: "Otros", id: "l-otros", nivel: 4, link: "/otros" }
+            title: "Civil y Comercial", id: "l-civil-y-comercial", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Parte General", id: "l-parte-general", nivel: 4, link: "/productos.html" },
+              { title: "Contratos", id: "l-contratos", nivel: 4, link: "/productos.html" },
+              { title: "Familia y Sucesiones", id: "l-familia-y-sucesiones", nivel: 4, link: "/productos.html" },
+              { title: "Consumidor", id: "l-consumidor", nivel: 4, link: "/productos.html" },
+              { title: "Obligaciones y Daños", id: "l-obligaciones-y-daños", nivel: 4, link: "/productos.html" },
+              { title: "Reales e Inmobiliario", id: "l-reales-e-inmobiliario", nivel: 4, link: "/productos.html" },
+              { title: "Societario y Empresarial", id: "l-societario-y-empresarial", nivel: 4, link: "/productos.html" },
+              { title: "Propiedad Intelectual", id: "l-propiedad-intelectual", nivel: 4, link: "/productos.html" },
+              { title: "Del Seguro", id: "l-del-seguro", nivel: 4, link: "/productos.html" },
+              { title: "Otros", id: "l-otros", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Laboral y Previsional", id: "l-laboral-y-previsional", nivel: 3, link: "/laboral-y-previsional", submenu: [
-              { title: "Laboral", id:"laboral", nivel: 4, link: "/laboral" },
-              { title: "Previsional", id: "l-previsional", nivel: 4, link: "/previsional" },
-              { title: "Modelos y práctica profesional", id: "l-modelos-y-practica-profesional", nivel: 4, link: "/modelos-y-practica-profesional" }
+            title: "Laboral y Previsional", id: "l-laboral-y-previsional", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Laboral", id:"laboral", nivel: 4, link: "/productos.html" },
+              { title: "Previsional", id: "l-previsional", nivel: 4, link: "/productos.html" },
+              { title: "Modelos y práctica profesional", id: "l-modelos-y-practica-profesional", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Procesal Civil y Comercial", id: "l-procesal-civil-y-comercial", nivel: 3, link: "/procesal-civil-y-comercial", submenu: [
-              { title: "Procesal Civil y Comercial", id: "l-procesal-civil-y-comercial", nivel: 4, link: "/procesal-civil-y-comercial" },
-              { title: "Modelos y práctica profesional", id: "l-modelos-y-practica-profesional", nivel: 4, link: "/modelos-y-practica-profesional" },
-              { title: "Informático", id: "l-informatico", nivel: 4, link: "/informatico" }
+            title: "Procesal Civil y Comercial", id: "l-procesal-civil-y-comercial", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Procesal Civil y Comercial", id: "l-procesal-civil-y-comercial", nivel: 4, link: "/productos.html" },
+              { title: "Modelos y práctica profesional", id: "l-modelos-y-practica-profesional", nivel: 4, link: "/productos.html" },
+              { title: "Informático", id: "l-informatico", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Penal y Procesal Penal", id: "l-penal-y-procesal-penal", nivel: 3, link: "/penal-y-procesal-penal", submenu: [
-              { title: "Penal", id: "l-penal", nivel: 4, link: "/penal" },
-              { title: "Procesal Penal", id: "l-procesal-penal", nivel: 4, link: "/procesal-penal" },
-              { title: "Violencia de género", id: "l-violencia-de-genero", nivel: 4, link: "/violencia-de-genero" }
+            title: "Penal y Procesal Penal", id: "l-penal-y-procesal-penal", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Penal", id: "l-penal", nivel: 4, link: "/productos.html" },
+              { title: "Procesal Penal", id: "l-procesal-penal", nivel: 4, link: "/productos.html" },
+              { title: "Violencia de género", id: "l-violencia-de-genero", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Público e Internacional", id: "l-publico-e-internacional", nivel: 3, link: "/publico-e-internacional", submenu: [
-              { title: "Administrativo", id:"l-administrativo", nivel: 4, link: "/administrativo" },
-              { title: "Aeronáutico y Marítimo", id: "l-aeronautico-y-maritimo", nivel: 4, link: "/aeronautico-y-maritimo" },
-              { title: "Aduanero", id: "l-aduanero", nivel: 4, link: "/aduanero" },
-              { title: "Ambiental", id: "l-ambiental", nivel: 4, link: "/ambiental" },
-              { title: "Constitucional", id: "l-constitucional", nivel: 4, link: "/constitucional" },
-              { title: "Internacional", id: "l-internacional", nivel: 4, link: "/internacional" },
-              { title: "Tributario", id: "l-tributario", nivel: 4, link: "/tributario" },
-              { title: "Económico", id: "l-economico", nivel: 4, link: "/economico" }
+            title: "Público e Internacional", id: "l-publico-e-internacional", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Administrativo", id:"l-administrativo", nivel: 4, link: "/productos.html" },
+              { title: "Aeronáutico y Marítimo", id: "l-aeronautico-y-maritimo", nivel: 4, link: "/productos.html" },
+              { title: "Aduanero", id: "l-aduanero", nivel: 4, link: "/productos.html" },
+              { title: "Ambiental", id: "l-ambiental", nivel: 4, link: "/productos.html" },
+              { title: "Constitucional", id: "l-constitucional", nivel: 4, link: "/productos.html" },
+              { title: "Internacional", id: "l-internacional", nivel: 4, link: "/productos.html" },
+              { title: "Tributario", id: "l-tributario", nivel: 4, link: "/productos.html" },
+              { title: "Económico", id: "l-economico", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Mod. y Práct. Profesionales", id: "l-modelos-y-practica-profesional-2", nivel: 3, link: "/modelos-y-practica-profesionales", submenu: [
-              { title: "Civil y Comercial", id: "l-civil-y-comercial", nivel: 4, link: "/civil-y-comercial" },
-              { title: "Laboral y Previsional", id: "l-laboral-y-previsional", nivel: 4, link: "/laboral-y-previsional" },
-              { title: "Penal", id: "l-penal", nivel: 4, link: "/penal" }
+            title: "Mod. y Práct. Profesionales", id: "l-modelos-y-practica-profesional-2", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Civil y Comercial", id: "l-civil-y-comercial", nivel: 4, link: "/productos.html" },
+              { title: "Laboral y Previsional", id: "l-laboral-y-previsional", nivel: 4, link: "/productos.html" },
+              { title: "Penal", id: "l-penal", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Otros", id: "l-otros", nivel: 3, link: "/otros"
+            title: "Otros", id: "l-otros", nivel: 3, link: "/productos.html"
           }
         ]
       },
       {
-        title: "Ebooks", id: "l-ebooks", nivel: 2, link: "/ebooks"
+        title: "Ebooks", id: "l-ebooks", nivel: 2, link: "/productos.html"
       },
       {
-        title: "Papers", id: "l-papers", nivel: 2, link: "/papers"
+        title: "Papers", id: "l-papers", nivel: 2, link: "/productos.html"
       }
     ]
   },
   {
-    title: "Cursos", id: "cursos", nivel: 1, link:"/cursos", submenu: [
+    title: "Cursos", id: "cursos", nivel: 1, link:"/productos.html", submenu: [
       {
-        title: "Presenciales", id: "c-presenciales", nivel: 2, link: "/presenciales"
+        title: "Presenciales", id: "c-presenciales", nivel: 2, link: "/productos.html"
       },
       {
-        title: "Videoclases", id: "c-videoclases", nivel: 2, link: "/videoclases"
+        title: "Videoclases", id: "c-videoclases", nivel: 2, link: "/productos.html"
       },
       {
-        title: "Cursos online", id: "c-cursos-online", nivel: 2, link: "/cursos-online", submenu: [
+        title: "Cursos online", id: "c-cursos-online", nivel: 2, link: "/productos.html", submenu: [
           {
-            title: "Códigos", id: "c-cursos", nivel: 3, link: "/codigos"
+            title: "Códigos", id: "c-cursos", nivel: 3, link: "/productos.html"
           },
           {
-            title: "Civil y Comercial", id: "c-civil-y-comercial", nivel: 3, link: "civil-y-comercial", submenu: [
-              { title: "Parte General", id: "c-parte-general", nivel: 4, link: "/parte-general" },
-              { title: "Contratos", id: "c-contratos", link: "/contratos" },
-              { title: "Familia y Sucesiones", id: "c-familia-y-sucesiones", nivel: 4, link: "/familia-y-sucesiones" },
-              { title: "Consumidor", id: "c-consumidor", nivel: 4, link: "/consumidor" },
-              { title: "Obligaciones y Daños", id: "c-obligaciones-y-daños", nivel: 4, link: "/obligaciones-y-daños" },
-              { title: "Reales e Inmobiliario", id: "c-reales-e-inmobiliario", nivel: 4, link: "/reales-e-inmobiliario" },
-              { title: "Societario y Empresarial", id: "c-societario-y-empresarial", nivel: 4, link: "/societario-y-empresarial" },
-              { title: "Propiedad Intelectual", id: "c-propiedad-intelectual", nivel: 4, link: "/propiedad-intelectual" },
-              { title: "Del Seguro", id: "c-del-seguro", nivel: 4, link: "/del-seguro" },
-              { title: "Otros", id: "c-otros", nivel: 4, link: "/otros" }
+            title: "Civil y Comercial", id: "c-civil-y-comercial", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Parte General", id: "c-parte-general", nivel: 4, link: "/productos.html" },
+              { title: "Contratos", id: "c-contratos", link: "/productos.html" },
+              { title: "Familia y Sucesiones", id: "c-familia-y-sucesiones", nivel: 4, link: "/productos.html" },
+              { title: "Consumidor", id: "c-consumidor", nivel: 4, link: "/productos.html" },
+              { title: "Obligaciones y Daños", id: "c-obligaciones-y-daños", nivel: 4, link: "/productos.html" },
+              { title: "Reales e Inmobiliario", id: "c-reales-e-inmobiliario", nivel: 4, link: "/productos.html" },
+              { title: "Societario y Empresarial", id: "c-societario-y-empresarial", nivel: 4, link: "/productos.html" },
+              { title: "Propiedad Intelectual", id: "c-propiedad-intelectual", nivel: 4, link: "/productos.html" },
+              { title: "Del Seguro", id: "c-del-seguro", nivel: 4, link: "/productos.html" },
+              { title: "Otros", id: "c-otros", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Laboral y Previsional", id: "c-laboral-y-previsional", nivel: 3, link: "/laboral-y-previsional", submenu: [
-              { title: "Laboral", id:"c-laboral", nivel: 4, link: "/laboral" },
-              { title: "Previsional", id: "c-previsional", nivel: 4, link: "/previsional" }
+            title: "Laboral y Previsional", id: "c-laboral-y-previsional", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Laboral", id:"c-laboral", nivel: 4, link: "/productos.html" },
+              { title: "Previsional", id: "c-previsional", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Proc. Civil y Comercial", id: "c-procesal-civil-y-comercial", nivel: 3, link: "/procesal-civil-y-comercial"
+            title: "Proc. Civil y Comercial", id: "c-procesal-civil-y-comercial", nivel: 3, link: "/productos.html"
           },
           {
-            title: "Penal y Procesal Penal", id: "c-penal-y-procesal-penal", nivel: 3, link: "/penal-y-procesal-penal"
+            title: "Penal y Procesal Penal", id: "c-penal-y-procesal-penal", nivel: 3, link: "/productos.html"
           },
           {
-            title: "Público e Internacional", id: "c-publico-e-internacional", nivel: 3, link: "/publico-e-internacional", submenu: [
-              { title: "Aeronáutico", id: "c-aeronautico", nivel: 4, link: "/aeronautico" },
-              { title: "Constitucional", id: "c-constitucional", nivel: 4, link: "/constitucional" }
+            title: "Público e Internacional", id: "c-publico-e-internacional", nivel: 3, link: "/productos.html", submenu: [
+              { title: "Aeronáutico", id: "c-aeronautico", nivel: 4, link: "/productos.html" },
+              { title: "Constitucional", id: "c-constitucional", nivel: 4, link: "/productos.html" }
             ]
           },
           {
-            title: "Otros", id: "otros", nivel: 3, link: "/otros"
+            title: "Otros", id: "otros", nivel: 3, link: "/productos.html"
           } 
         ]
       }
     ]
   },
   {
-    title: "Suscripciones", id: "suscripciones", nivel: 1, link: "/suscripciones"
+    title: "Suscripciones", id: "suscripciones", nivel: 1, link: "/productos.html"
   }
 ];
 
